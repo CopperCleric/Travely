@@ -2,9 +2,9 @@
 This system is a blogging platform for travelers to document and share their experiences with others.
 
 
-System function :
 
-Traveler:
+
+System function :
 
 ● User Registration and login to access the system, manage the sessions.
 
