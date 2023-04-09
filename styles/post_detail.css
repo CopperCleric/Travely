@@ -1,0 +1,35 @@
+#postWrapper {
+  background-color: var(--white);
+  margin: 30px 300px;
+  padding: 30px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#topSection {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#profilePic {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+#userBio {
+  font-size: 12px;
+}
+
+#contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#postImage {
+  width: 100%;
+}
