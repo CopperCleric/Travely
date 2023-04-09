@@ -6,22 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post Detail</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/post_detail.css">
+  <script type="module" src="scripts/post_detail.js"></script>
 </head>
 
 <body>
   <div id="postWrapper">
-    <div id="topSection">
-      <img id="profilePic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg" alt="profile pic" />
-      <div id="userInfo">
-        <h2 id="userName">Eren Yeager</h2>
-        <p id="userBio">Tatakae | Tatakae | Tatakae</p>
-      </div>
-    </div>
-    <div id="contentSection">
-      <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <img id="postImage" src="https://wallpaperaccess.com/full/2602042.jpg" alt="post image">
+    <div id="postPanel">
+      <section id="topSection">
+        <img id="profilePic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg" alt="profile pic" />
+        <div id="userInfo">
+          <h2 id="userName">Marley</h2>
+          <p id="userBio">Tatakae | Tatakae | Tatakae</p>
+        </div>
+      </section>
+      <section id="contentSection">
+        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.</p>
+        <img id="postImage" src="https://wallpaperaccess.com/full/2602042.jpg" alt="post image">
+        <div id="likesAndComments">
+          <p class="likesAndCommentsDataText">696 likes</p>
+          <p class="likesAndCommentsDataText">123 comments</p>
+        </div>
+      </section>
+      <hr>
+      <section id="bottomSection">
+        <div id="likeAndCommentBar">
+          <div class="iconWrapper">
+            <i class="fa fa-heart postIcon" style="color: var(--like);"></i>
+          </div>
+          <div class="iconWrapper">
+            <i class="fa fa-comment postIcon"></i>
+          </div>
+        </div>
+        <div id="commentList">
+          <!-- <div class="commentWrapper">
+            <img class="commentPic" src="https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg" alt="profile pic">
+            <div class="comment">
+              <h2 class="commentUserName">Marley</h2>
+              <p class="commentText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+          </div> -->
+        </div>
+        <div id="currentUserCommentBar">
+          <img class="commentPic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg" alt="profile pic" />
+          <input id="commentInput" type="text" placeholder="Write a comment...">
+          <div id="sendIconWrapper" class="iconWrapper">
+            <i id="sendIcon" class="fa fa-paper-plane"></i>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </body>

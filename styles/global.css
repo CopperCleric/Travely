@@ -1,6 +1,11 @@
 :root {
   --background-blue: #D8F0FA;
   --white: #FFFFFF;
+  --black: #000000;
+  --like: #FF8DCC;
+  --grey-text: #3C3C3C;
+  --light-yellow: #FBF4E2;
+  --light-purple: #DED7FB;
 }
 
 * {
