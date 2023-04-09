@@ -1,0 +1,167 @@
+#postWrapper {
+  padding: 35px;
+}
+
+#postPanel {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 30px 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#topSection {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#profilePic {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+#userBio {
+  font-size: 12px;
+}
+
+#contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#postImage {
+  width: 100%;
+}
+
+#likesAndComments {
+  display: flex;
+  gap: 20px;
+}
+
+.likesAndCommentsDataText {
+  color: var(--grey-text);
+  font-size: 14px;
+}
+
+#bottomSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#likeAndCommentBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconWrapper {
+  cursor: pointer;
+}
+
+.postIcon {
+  font-size: 25px;
+}
+
+/* .fa.fa-heart{
+  color: transparent;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: var(--black);
+} */
+
+.fa.fa-comment{
+  color: transparent;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: var(--black);
+}
+
+#commentList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commentWrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.commentPic{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-yellow);
+  padding: 10px 15px 15px 15px;
+  border-radius: 15px;
+}
+
+.commentUserName {
+  font-size: 20px;
+}
+
+.commentText {
+
+}
+
+#currentUserCommentBar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#commentInput {
+  background-color: var(--background-blue);
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  width: auto;
+  font-size: 16px;
+  flex: 1;
+  min-width: 30px;
+}
+
+#sendIconWrapper {
+  background-color: var(--background-blue);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sendIcon {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  #postPanel {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #postPanel {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #postWrapper {
+    padding: 20px;
+  }
+}
+
