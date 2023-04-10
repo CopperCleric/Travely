@@ -1,0 +1,312 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Travely</title>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="/assets/logo.png" alt="logo for travely" />
+        </div>
+
+        <div class="title-container">
+          <h2>Travely</h2>
+        </div>
+        <form class="searchbar-container">
+          <input
+            class="searchinput"
+            type="search"
+            placeholder="What are you looking for ?"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='What are you looking for ?'"
+          />
+        </form>
+
+        <div class="icon-container">
+          <ul>
+            <li class="list-item"><i class="fa-regular fa-bell"></i></li>
+            <li class="list-item"><i class="fa-solid fa-gear"></i></li>
+            <li class="list-item">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Side Navigation Section -->
+    <navbar class="sidebar">
+      <div class="profile-content">
+        <div class="profile">
+          <img src="/assets/profile.jpg" />
+          <div class="profile-name">Zheng Wu Bang</div>
+          <hr />
+          <p class="user-email">@wbzheng@gmail.com</p>
+        </div>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span class="links_name">Profile</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span class="links_name">User Analytics</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <span class="links_name">Settings</span>
+          </a>
+        </li>
+
+        <li class="logout-container">
+          <a href="#" class="log-out">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </navbar>
+
+    <main>
+      <!-- Write Post Container-->
+      <div class="write-post-container">
+        <div class="profile-name-container">
+          <img src="/assets/profile.jpg" />
+          <div>
+            <p>Zheng Wu Bang</p>
+            <small>content writer</small>
+          </div>
+        </div>
+
+        <div class="post-input-container">
+          <textarea
+            rows="3"
+            placeholder="What's on your mind, Zheng ?"
+          ></textarea>
+          <div class="add-post-links">
+            <a href="#" class="function-container">
+              <div>
+                <i
+                  class="fa-regular fa-face-laugh-beam"
+                  id="icon-background"
+                ></i>
+              </div>
+              <span>Feeling</span>
+            </a>
+            <a href="#" class="function-container">
+              <div>
+                <i class="fa-regular fa-image" id="icon-background"></i>
+              </div>
+              <span>Upload photo</span>
+            </a>
+            <a href="#" class="function-container">
+              <div>
+                <i class="fa-regular fa-circle-play" id="icon-background"></i>
+              </div>
+              <span>Upload video</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Container-->
+      <div class="post-container">
+        <div class="single-user-post-container">
+          <div class="profile-name-container">
+            <img src="/assets/profile.jpg" />
+            <div>
+              <p>Zheng Wu Bang</p>
+              <small>April 9 2023, 13:40 pm</small>
+            </div>
+          </div>
+
+          <div class="read-more-container">
+            <p class="post-text">
+              Hey everyone! I'm currently in the beautiful city of Barcelona and
+              I just had to share my experience with you all. This place is
+              simply magical!
+              <span class="read-more-text">
+                The city is bursting with life, color, and culture.
+              </span>
+            </p>
+            <span class="read-more-btn">Read More..</span>
+          </div>
+
+          <!-- image slider start-->
+          <div class="slider">
+            <div class="slides">
+              <!-- radio button start-->
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+              <input type="radio" name="radio-btn" id="radio4" />
+
+              <!-- radio button end-->
+
+              <!--slide images start-->
+              <div class="slide first">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <!-- slide images end-->
+            </div>
+            <!-- manual navigation start-->
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!-- manual navigation end-->
+          </div>
+          <!-- image slider ends-->
+
+          <!-- show like and comment-->
+          <div class="like-comment-container">
+            <p>100 likes</p>
+            <p>10 comments</p>
+          </div>
+          <hr class="line-break" />
+
+          <!-- display like,comment and share icon-->
+          <div class="like-comment-share-container">
+            <ul class="icon-list">
+              <li><i class="fa-regular fa-heart"></i></li>
+              <span>Likes</span>
+            </ul>
+            <ul class="icon-list">
+              <li><i class="fa-regular fa-comment-dots"></i></li>
+              <span>Comments</span>
+            </ul>
+            <ul class="icon-list">
+              <li><i class="fa-solid fa-arrow-up-from-bracket"></i></i></li>
+              <span>Share</span>
+            </ul>
+          </div>
+        </div>
+
+        <div class="single-user-post-container">
+          <div class="profile-name-container">
+            <img src="/assets/profile.jpg" />
+            <div>
+              <p>Zheng Wu Bang</p>
+              <small>April 9 2023, 13:40 pm</small>
+            </div>
+          </div>
+
+          <div class="read-more-container">
+            <p class="post-text">
+              Hey everyone! I'm currently in the beautiful city of Barcelona and
+              I just had to share my experience with you all. This place is
+              simply magical!
+              <span class="read-more-text">
+                The city is bursting with life, color, and culture.
+              </span>
+            </p>
+            <span class="read-more-btn">Read More..</span>
+          </div>
+
+          <!-- image slider start-->
+          <div class="slider">
+            <div class="slides">
+              <!-- radio button start-->
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+              <input type="radio" name="radio-btn" id="radio4" />
+
+              <!-- radio button end-->
+
+              <!--slide images start-->
+              <div class="slide first">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="/assets/profile.jpg" alt="" />
+              </div>
+              <!-- slide images end-->
+            </div>
+            <!-- manual navigation start-->
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!-- manual navigation end-->
+          </div>
+          <!-- image slider ends-->
+
+          <!-- show like and comment-->
+          <div class="like-comment-container">
+            <p>100 likes</p>
+            <p>10 comments</p>
+          </div>
+          <hr class="line-break" />
+
+          <!-- display like,comment and share icon-->
+          <div class="like-comment-share-container">
+            <ul class="icon-list">
+              <li><i class="fa-regular fa-heart"></i></li>
+              <span>Likes</span>
+            </ul>
+            <ul class="icon-list">
+              <li><i class="fa-regular fa-comment-dots"></i></li>
+              <span>Comments</span>
+            </ul>
+            <ul class="icon-list">
+              <li><i class="fa-solid fa-arrow-up-from-bracket"></i></i></li>
+              <span>Share</span>
+            </ul>
+          </div>
+        </div>        
+        <!-- single user post ends-->
+      </div>
+        <!-- single user post ends-->
+      </div>
+
+      
+
+      
+      <!-- post container ends-->
+    </main>
+
+    <script src="scripts/homepage.js"></script>
+    <script src="https://kit.fontawesome.com/27fa9359fc.js"crossorigin="anonymous"></script>
+  </body>
+</html>
