@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  background-color: #D8F0FA;
+}
+
+
+/* Header CSS */
+.header {
+  width:100%;
+  height:60px;
+  position: fixed;
+  background-color: #DED7FB;
+  z-index: 1;
+}
+
+.header-container {
+  max-width: 100%;
+  max-height: 100%;
+  display:flex;  
+  align-items: center;
+  color:black;
+}
+
+.logo-container {
+  max-width: 100%;
+  max-height: 100%;
+  flex: 0;;
+  margin-left: 1%;
+}
+
+.title-container {
+  flex:0;
+  font-size: 1em;
+  margin-left: 0.5em;
+}
+
+.logo-container img {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding:2px;
+}
+
+.searchbar-container {
+  margin-left: 100px;
+  width:50%;
+  display:flex;
+  align-items: center;
+  
+}
+
+.searchinput {
+  width:60%;
+  height:2.5em;
+  border-radius: 8px;
+  border:none;
+  background-image: url('/assets/search.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 40px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.search-icon {
+  font-size: 20px !important;
+}
+
+
+.icon-container {
+  flex:1;
+}
+
+.icon-container ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list-item {
+  list-style-type: none;
+  margin:10px;
+  box-sizing: border-box;
+  padding:8px 11px 8px 11px;
+  background-color: #ffffff;
+  width:2.4em;
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+/*Side Navigation Bar CSS */
+
+.sidebar {
+  height: 100%;
+  position:fixed;
+  margin-top: 60px;
+  width: 200px;
+  position: fixed;
+  background: #ffffff;
+  left: 0;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+}
+
+.sidebar .profile-content .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+}
+
+hr {
+  height:0.2px;
+  width:100%;
+  background-color:black;
+}
+
+.profile-content .profile .profile-name {
+  margin:0.5em;
+  font-size: 15px;
+  font-weight: 400;
+  color: #626262;
+}
+
+.user-email {
+  font-size : 12px;
+  margin-top : 5%;
+  color:#0F191A;
+  opacity: 50%;
+}
+.profile img {
+  width:50px;
+  height:50px;
+  border-radius: 10px;
+}
+
+.nav-list  {
+  margin-top: 20px;
+  height:100%;
+  padding-inline-start: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list li{
+  list-style: none;
+  position: relative;
+  height:50px;
+  width: 180px;
+  line-height: 50px;
+  margin-top : 0.5em;
+}
+
+.nav-list li a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.nav-list li a i{
+  height: 50px;
+  min-width: 40px;
+  border-radius: 12px;
+  line-height: 50px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #DED7FB;
+}
+
+.logout-container {
+  margin-top: 13em !important;
+}
+
+.log-out {
+  color: red !important; 
+  width: 180px;
+}
+
+
+
+/* Write Post */
+
+.write-post-container {
+  position:absolute;
+  left:20em;
+  top:6em;
+  width:60%;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding:20px;
+  
+}
+
+.profile-name-container {
+  display: flex;
+  align-items: center;
+}
+.profile-name-container img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right:10px;
+}
+
+.profile-name-container p {
+  font-weight: 500;
+  
+}
+
+.profile-name-container small {
+  font-size:12px;
+  color: #626262;
+}
+
+.post-input-container {
+  padding-left:55px;
+  padding-top:20px;
+}
+
+.post-input-container textarea{
+  width:100%;
+  border:0;
+  outline:0;
+  border-bottom:1px solid #ccc;
+  background:transparent;
+  resize:none;
+}
+
+.add-post-links {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.add-post-links a{
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.function-container {
+  display:flex;
+  align-items: center;
+  
+}
+
+.function-container div {
+  background-color: #FFEE93;
+  padding:8px;  
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+#icon-background{
+  text-decoration: none;
+  color:black;
+}
+
+.add-post-links a span{
+  color:black;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+
+
+/* User Post */
+.post-container {
+  position: absolute;
+  margin-top: 20em;
+  margin-left:21em;
+  width:60%;
+  height:100%;
+}
+
+.read-more-container{
+  display:flex;
+  flex-direction: column;
+}
+
+.read-more-btn{
+  color: #0984e3;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+.read-more-text{
+  display: none;
+  transition: all 0.5 ease;
+}
+
+.read-more-text--show{
+  display: inline;
+}
+.post-text {
+  font-size:0.8rem;
+  padding:1em;
+  
+}
+.single-user-post-container{
+  background-color: #FFFFFF;
+  padding:20px;
+  border-radius: 6px;
+  margin-top: 2em;
+}
+
+.slider{
+  overflow: hidden;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.slides{
+  width:500%;  
+  height:80%;
+  display:flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide {
+  width:20%;
+  transition: 2s;
+}
+
+.slide img {
+  width:80%;
+  height:80%;
+}
+
+/*slide navigation*/
+
+.navigation-manual {
+  margin-top: -80px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manual-btn {
+  border:1px solid #40D3DC;
+  padding: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+.manual-btn:hover {
+  background:#40D3DC ;
+}
+
+#radio1:checked ~ .first{
+  margin-left:0;
+}
+
+#radio2:checked ~ .first{
+  margin-left:-20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left:-40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left:-60%;
+}
+
+.like-comment-container {
+  display:flex;
+  align-items: center;
+}
+
+.like-comment-container p{
+  font-size: 12px;
+  margin-right: 1em;
+  color: #3C3C3C;
+  margin-bottom: 10px;
+}
+
+.like-comment-share-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-list {
+  display: flex;
+  align-items: center;
+  margin-top:10px;
+}
+
+.icon-list li{
+  list-style:none;
+  font-size:15px;
+  margin-right: 5px;
+  color: #3C3C3C;
+}
+
+.icon-list span {
+  color: #3C3C3C;
+  font-size:0.8em;
+}
