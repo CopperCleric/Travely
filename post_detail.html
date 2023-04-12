@@ -21,6 +21,13 @@
       Back
     </button>
     <div id="postPanel">
+      <button id="optionBtn" class="iconWrapper" onclick="toggleShowOption()">
+        <i class="fa fa-ellipsis-h postIcon"></i>
+      </button>
+      <ul id="optionsList">
+        <li class="option" onclick="showEdit()">Edit post</li>
+        <li class="option" onclick="showDelete()">Delete post</li>
+      </ul>
       <section id="topSection">
         <img id="profilePic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg" alt="profile pic" />
         <div id="userInfo">
@@ -29,10 +36,12 @@
         </div>
       </section>
       <section id="contentSection">
-        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-          the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.</p>
-        <!-- <img id="postImage" src="https://wallpaperaccess.com/full/2602042.jpg" alt="post image"> -->
+        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <textarea id="captionInput" type="text" placeholder="Write caption..." rows="5"></textarea>
+        <div id="editBar">
+          <button id="saveBtn" class="editBtn" onclick="saveEdit()">Save</button>
+          <button id="cancelBtn" class="editBtn" onclick="closeEdit()">Cancel</button>
+        </div>
         <div class="slideshow-container">
 
           <div class="mySlides fade">

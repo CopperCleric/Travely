@@ -6,6 +6,7 @@
   --grey-text: #3C3C3C;
   --light-yellow: #FBF4E2;
   --light-purple: #DED7FB;
+  --hover-grey: #eeeeee;
 }
 
 * {
@@ -25,12 +26,8 @@ body {
   background-color: var(--background-blue);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 button {
   border: none;
   outline: none;
+  cursor: pointer;
 }

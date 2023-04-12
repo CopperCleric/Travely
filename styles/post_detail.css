@@ -24,8 +24,22 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 
+#optionBtn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+#optionBtn:hover {
+  background-color: var(--hover-grey);
+}
 
 /********* TOP SECTION *********/
 #topSection {
@@ -50,6 +64,37 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+#captionInput {
+  display: none;
+  background-color: var(--background-blue);
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none;
+}
+
+#editBar {
+  display: none;
+  align-items: center;
+  gap: 20px;
+}
+
+.editBtn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#saveBtn {
+  background-color: var(--light-purple);
+}
+
+#cancelBtn {
+  background-color: var(--background-blue);
 }
 
 #postImage {
@@ -88,10 +133,10 @@
   font-size: 25px;
 }
 
-.outlinedIcon{
+.outlinedIcon {
   color: transparent;
-   -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--black);
 }
 
 .isLike {
@@ -291,4 +336,29 @@
   .text {
     font-size: 11px
   }
+}
+
+
+/********* POP UP DROPDOWN OPTIONS *********/
+#optionsList {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.option {
+  list-style: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.option:hover {
+  background-color: var(--hover-grey);
 }

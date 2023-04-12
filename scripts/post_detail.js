@@ -138,3 +138,42 @@ const backBtn = document.getElementById("backBtn");
 backBtn.addEventListener('click', () => {
   window.location.href = '/HomePage.html';
 });
+
+
+// POPUP DROPDOWN OPTIONS
+const optionsList = document.getElementById('optionsList');
+let showOption = false;
+
+const toggleShowOption = () => {
+  showOption = !showOption;
+  optionsList.style.display = showOption ? 'block' : 'none';
+}
+
+
+// EDIT POST
+const caption = document.getElementById("caption");
+const captionInput = document.getElementById("captionInput");
+const editBar = document.getElementById("editBar");
+
+const showEdit = () => {
+  toggleShowOption();
+  caption.style.display = "none";
+  captionInput.value = caption.textContent;
+  captionInput.style.display = "block";
+  editBar.style.display = "flex";
+}
+
+const closeEdit = () => {
+  caption.style.display = "block";
+  captionInput.style.display = "none";
+  editBar.style.display = "none";
+}
+
+const saveEdit = () => {
+  caption.textContent = captionInput.value;
+  closeEdit();
+}
+
+const showDelete = () => {
+  toggleShowOption();
+}
