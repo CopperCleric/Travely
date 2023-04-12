@@ -36,7 +36,7 @@
         </div>
       </section>
       <section id="contentSection">
-        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
         <textarea id="captionInput" type="text" placeholder="Write caption..." rows="5"></textarea>
         <div id="editBar">
           <button id="saveBtn" class="editBtn" onclick="saveEdit()">Save</button>
@@ -51,12 +51,14 @@
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img class="slideImg" src="https://afar.brightspotcdn.com/dims4/default/a69e584/2147483647/strip/true/crop/1357x720+41+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg">
+            <img class="slideImg"
+              src="https://afar.brightspotcdn.com/dims4/default/a69e584/2147483647/strip/true/crop/1357x720+41+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg">
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img class="slideImg" src="https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/heroImage1/PowerfulReasons_hero.jpg">
+            <img class="slideImg"
+              src="https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/heroImage1/PowerfulReasons_hero.jpg">
           </div>
 
           <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -103,6 +105,17 @@
           </button>
         </div>
       </section>
+
+      <!-- DELETE CONFIRMATION POPUP -->
+      <div id="confirmModal" class="popUpModal">
+        <div class="modalContent">
+          <p id="modalText">Are you sure you want to delete this post?</p>
+          <div id="modalButtons">
+            <button id="confirmDeleteBtn" class="modalBtn" onclick="deletePost()">Yes</button>
+            <button id="cancelDeleteBtn" class="modalBtn" onclick="closeDelete()">No</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="scripts/post_detail.js"></script>

@@ -174,6 +174,20 @@ const saveEdit = () => {
   closeEdit();
 }
 
+
+// DELETE POST
+const confirmModal = document.getElementById("confirmModal");
+
 const showDelete = () => {
   toggleShowOption();
+  confirmModal.style.display = "block";
+}
+
+const closeDelete = () => {
+  confirmModal.style.display = "none";
+}
+
+const deletePost = () => {
+  closeDelete();
+  alert("You deleted the post");
 }
