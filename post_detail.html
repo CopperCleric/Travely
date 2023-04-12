@@ -12,8 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
     rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
-  <script type="module" src="scripts/post_detail.js"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
 </head>
 
 <body>
@@ -30,7 +29,35 @@
         <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
           the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.</p>
-        <img id="postImage" src="https://wallpaperaccess.com/full/2602042.jpg" alt="post image">
+        <!-- <img id="postImage" src="https://wallpaperaccess.com/full/2602042.jpg" alt="post image"> -->
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="slideImg" src="https://wallpaperaccess.com/full/2602042.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img class="slideImg" src="https://afar.brightspotcdn.com/dims4/default/a69e584/2147483647/strip/true/crop/1357x720+41+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img class="slideImg" src="https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/heroImage1/PowerfulReasons_hero.jpg">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         <div id="likesAndComments">
           <p class="likesAndCommentsDataText">696 likes</p>
           <p class="likesAndCommentsDataText">123 comments</p>
@@ -66,6 +93,7 @@
       </section>
     </div>
   </div>
+  <script src="scripts/post_detail.js"></script>
 </body>
 
 </html>
