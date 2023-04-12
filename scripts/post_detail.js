@@ -1,29 +1,36 @@
+// COMMENT SECTION
+let commentsLen = 0;
+const commentsText = document.getElementById("commentsText");
+
+const refreshCommentsLength = () => {
+  commentsText.textContent = `${commentsLen} comments`;
+}
+
 const comments = [ // mock data
   {
     username: 'Eren Yeager',
     text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    imageSrc: 'https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg'
+    imgSrc: 'https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg'
   },
   {
     username: 'Reiner',
     text: 'fddfsdf dsfdfdsfdsf fsdfdsfsdfdsfsdfsfs fsfsdfdsfsd',
-    imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ruDIuDPXkGAZDENGuJmJEDhDLNHMFK6nQg&usqp=CAU'
+    imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ruDIuDPXkGAZDENGuJmJEDhDLNHMFK6nQg&usqp=CAU'
   },
   {
     username: 'Bertholdt',
     text: 'yututyutuy fsdf ',
-    imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIuiIh2DehF_SQoyKZswsl5_T4e_XT1gc1cQ&usqp=CAU'
+    imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIuiIh2DehF_SQoyKZswsl5_T4e_XT1gc1cQ&usqp=CAU'
   },
 ];
 
-comments.forEach(comment => {
-  // Create a new comment element
+const addComment = (username, text, imgSrc) => { // add comment into html
   const commentWrapper = document.createElement('div');
   commentWrapper.classList.add('commentWrapper');
 
   const commentPic = document.createElement('img');
   commentPic.classList.add('commentPic');
-  commentPic.src = comment.imageSrc;
+  commentPic.src = imgSrc;
   commentPic.alt = 'profile pic';
 
   const commentDiv = document.createElement('div');
@@ -31,11 +38,11 @@ comments.forEach(comment => {
 
   const commentUserName = document.createElement('h2');
   commentUserName.classList.add('commentUserName');
-  commentUserName.textContent = comment.username;
+  commentUserName.textContent = username;
 
   const commentText = document.createElement('p');
   commentText.classList.add('commentText');
-  commentText.textContent = comment.text;
+  commentText.textContent = text;
 
   commentDiv.appendChild(commentUserName);
   commentDiv.appendChild(commentText);
@@ -45,21 +52,42 @@ comments.forEach(comment => {
 
   const commentList = document.getElementById('commentList');
   commentList.appendChild(commentWrapper);
+
+  commentsLen++;
+  refreshCommentsLength();
+}
+
+comments.forEach(comment => { // add all comments into html
+  addComment(comment.username, comment.text, comment.imgSrc);
 });
+
+// SUBMIT COMMENT
+const commentInput = document.getElementById('commentInput');
+const sendBtn = document.getElementById('sendBtn');
+
+sendBtn.addEventListener('click', () => {
+  const inputValue = commentInput.value;
+  addComment(
+    "Current User Name",
+    inputValue,
+    "https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg"
+  );
+  commentInput.value = "";
+});
+
+
 
 // IMAGE SLIDES
 let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
+const plusSlides = (n) => {
   showSlides(slideIndex += n);
 }
 
-function currentSlide(n) {
+const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+const showSlides = (n) => {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -74,18 +102,32 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+showSlides(slideIndex);
 
+// LIKE POST FEATURE
+const likesText = document.getElementById('likesText');
+let likes = 69;
 let isLike = false;
-function toggleLike() {
+
+const refreshLike = () => {
+  likesText.textContent = `${likes} likes`;
+}
+refreshLike();
+
+const toggleLike = () => {
   isLike = !isLike;
   const likeIcon = document.getElementById('likeIcon');
 
-  if(isLike) {
+  if(isLike) { // user like the post
     likeIcon.classList.add("isLike");
     likeIcon.classList.remove("outlinedIcon");
+    likes++;
+    refreshLike();
   }
-  else{
+  else{ // user cancel like
     likeIcon.classList.add("outlinedIcon");
     likeIcon.classList.remove("isLike");
+    likes--;
+    refreshLike();
   }
 }

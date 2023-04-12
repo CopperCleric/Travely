@@ -136,7 +136,7 @@
   min-width: 30px;
 }
 
-#sendIconWrapper {
+#sendBtn {
   background-color: var(--background-blue);
   border-radius: 50%;
   height: 50px;
