@@ -74,3 +74,18 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+let isLike = false;
+function toggleLike() {
+  isLike = !isLike;
+  const likeIcon = document.getElementById('likeIcon');
+
+  if(isLike) {
+    likeIcon.classList.add("isLike");
+    likeIcon.classList.remove("outlinedIcon");
+  }
+  else{
+    likeIcon.classList.add("outlinedIcon");
+    likeIcon.classList.remove("isLike");
+  }
+}

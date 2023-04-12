@@ -66,11 +66,11 @@
       <hr>
       <section id="bottomSection">
         <div id="likeAndCommentBar">
-          <div class="iconWrapper">
-            <i class="fa fa-heart postIcon" style="color: var(--like);"></i>
+          <div class="iconWrapper" onclick="toggleLike()">
+            <i id="likeIcon" class="fa fa-heart postIcon outlinedIcon"></i>
           </div>
           <div class="iconWrapper">
-            <i class="fa fa-comment postIcon"></i>
+            <i class="fa fa-comment postIcon outlinedIcon"></i>
           </div>
         </div>
         <div id="commentList">

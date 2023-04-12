@@ -76,16 +76,14 @@
   font-size: 25px;
 }
 
-/* .fa.fa-heart{
+.outlinedIcon{
   color: transparent;
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: var(--black);
-} */
+}
 
-.fa.fa-comment {
-  color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black);
+.isLike {
+  color: var(--like);
 }
 
 #commentList {
