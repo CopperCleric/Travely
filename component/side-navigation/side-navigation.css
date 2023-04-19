@@ -1,0 +1,90 @@
+.sidebar {
+  height: 100%;
+  position: fixed;
+  margin-top: 60px;
+  width: 200px;
+  position: fixed;
+  background: #ffffff;
+  left: 0;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+}
+
+.sidebar .profile-content .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+}
+
+hr {
+  height: 0.2px;
+  width: 100%;
+  background-color: black;
+}
+
+.profile-content .profile .profile-name {
+  margin: 0.5em;
+  font-size: 15px;
+  font-weight: 400;
+  color: #626262;
+}
+
+.user-email {
+  font-size: 12px;
+  margin-top: 5%;
+  color: #0f191a;
+  opacity: 50%;
+}
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.nav-list {
+  margin-top: 20px;
+  height: 100%;
+  padding-inline-start: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list li {
+  list-style: none;
+  position: relative;
+  height: 50px;
+  width: 180px;
+  line-height: 50px;
+  margin-top: 0.5em;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.nav-list li a i {
+  height: 50px;
+  min-width: 40px;
+  border-radius: 12px;
+  line-height: 50px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ded7fb;
+}
+
+.logout-container {
+  margin-top: 11em !important;
+}
+
+.log-out {
+  color: red !important;
+  width: 180px;
+}
