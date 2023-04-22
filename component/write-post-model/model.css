@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -224,4 +225,232 @@ section .details span {
     display:none;
     color:red;
     font-size: 12px;
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index:3;
+}
+
+/* pop up box styling */
+#wrapper .popup-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
+  transition: opacity 0.3s 0s ease-in-out, transform 0.3s 0s ease-in-out;
+}
+#wrapper.active .popup-outer {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+#wrapper .popup-box {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 520px;
+  width: 100%;
+  overflow: auto;
+  max-height:600px;
+}
+
+.popup-box .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  color: #b4b4b4;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.popup-box .close:hover {
+  color: #333;
+}
+.popup-box .profile-text {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.popup-box .profile-text .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.profile-text .text .name {
+  font-size: 1em;
+  font-weight: 400;
+}
+.profile-text .text .profession {
+  font-size: 12px;
+  color: #626262;
+  margin-top: 8px;
+}
+.popup-box img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.popup-box textarea {
+  min-height: 140px;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 10px 10px 10px 14px;
+  font-weight: 300;
+  background: #f3f3f3;
+}
+.popup-box .button {
+  display: flex;
+  justify-content: flex-end;
+}
+.popup-box .button button {
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  background: #6f93f6;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.button button.cancel {
+  background: #f082ac;
+}
+.button button.cancel:hover {
+  background: #ec5f95;
+}
+.button button.send:hover {
+  background: #275df1;
+}
+
+.upload-container{
+    height: 167px;
+    display: flex;
+    cursor: pointer;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #6990F2;
+}
+
+form p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+form :where(i, p) {
+  color: #6990f2;
+}
+form i {
+  font-size: 50px;
+}
+
+section .row {
+  margin-bottom: 10px;
+  background: #e9f0ff;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i{
+  color: #6990f2;
+  font-size: 30px;
+}
+section .details span {
+  font-size: 14px;
+}
+.progress-area .row .content {
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar {
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: #6990f2;
+  border-radius: inherit;
+}
+.uploaded-area {
+  max-height: 232px;
+  overflow-y: scroll;
+}
+.uploaded-area.onprogress {
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar {
+  width: 0px;
+}
+.uploaded-area .row .content {
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size {
+  color: #404040;
+  font-size: 11px;
+}
+#icon-size {
+  font-size: 16px;
+  color: black;
+  opacity:0.8;
+}
+
+#icon-size:hover {
+    color:#4e76c8;
+}
+
+.error-message {
+    display:none;
+    color:red;
+    font-size: 12px;
+>>>>>>> cbd9c4db17bc0e9cc05ed9d8756b71cadd3acf22
 }
