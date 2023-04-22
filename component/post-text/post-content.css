@@ -1,0 +1,26 @@
+.read-more-container {
+  display: flex;
+  flex-direction: column;
+  padding-left : 4em;
+  padding-right : 4em;
+}
+
+.read-more-btn {
+  color: #0984e3;
+  font-size: 0.8em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.read-more-text {
+  display: none;
+  transition: all 0.5 ease;
+}
+
+.read-more-text--show {
+  display: inline;
+}
+.post-text {
+  font-size: 0.8rem;
+  padding: 1em;
+}
