@@ -3,8 +3,8 @@ const template = document.createElement("template");
 template.innerHTML = `
   <link rel="stylesheet" href="component/post-content-slider/slider.css">  
   <div class="slider">
-    <div class="slides">
-      <div class="slide fade">
+    <div class="slides ">
+      <div class="slide ">
         <img src="assets/profile.jpg" alt="" />
       </div>
       <div class="slide fade">
