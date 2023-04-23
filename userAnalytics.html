@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="analytics.css" />
+
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Import all the components-->
+    <script type="module" src="component/header/header.js"></script>
+    <script type="module" src="component/side-navigation/side-navigation.js"></script>
+    <script type="module" src="component/create-post/create-post.js"></script>
+    <script type="module" src="component/post-profile/post-profile.js"></script>
+    <script type="module" src="component/post-text/post-content.js"></script>
+    <script type="module" src="component/post-like-comment/likecomment.js"></script>
+    <script type="module" src="component/post-content-slider/slider.js"></script>
+    <!-- End of importing all the components-->
+    <title>Travely</title>
+  </head>
+
+  <body>
+    <header-section></header-section>
+    <side-navigation></side-navigation>
+    <main>
+        <div class="section">
+          <!---------------- 4 boxes ----------------->
+          <div class="row">
+            <!-- ========== Total Visitors ========== -->
+            <div class="column">
+                <div class="icon1" >
+                    <img
+                    src="assets/total-visitors.png"
+                    alt=""
+                  />
+                  </div>
+                  <div class="content">
+                    <p class="total">Daily Visitors</p>
+                    <p class="num">34567</p>
+                  </div>
+            </div>
+            <!-- ========== Total Posts ========== -->
+            <div class="column">
+                <div class="icon2">
+                    <img
+                    src="assets/total-posts.png"
+                    alt=""
+                  />
+                  </div>
+                  <div class="content">
+                    <p class="total">Total Posts</p>
+                    <p class="num">74,567</p>
+                  </div>
+            </div>
+            <!-- ========== Total Likes ========== -->
+            <div class="column">
+                <div class="icon3">
+                    <img
+                    src="assets/total-likes.png"
+                    alt=""
+                  />
+                  </div>
+                  <div class="content">
+                    <p class="total">Total Likes</p>
+                    <p class="num">24,567</p>
+                  </div>
+            </div>
+            <!-- ========== Rating ========== -->
+            <div class="column">
+                <div class="icon4">
+                    <img
+                    src="assets/rating.png"
+                    alt=""
+                  />
+                  </div>
+                  <div class="content">
+                    <p class="total">Rating</p>
+                    <p class="num">4.0/5.0</p>
+                  </div>
+            </div>
+          </div> 
+          <!-- End of 4 boxes -->
+
+        <!-- ========== View Reach ========== -->
+          <div class="container">
+            <div class="row">
+             <div class="col-view-reach">
+                  <div>
+                    <p class="title">View Reach</p>
+                  </div>
+                <div class="select">
+                  <select onchange="updateTime2(this)">
+                      <option value="days">Daily</option>
+                      <option value="weeks">Weekly</option>
+                      <option value="months">Monthly</option>
+                  </select>
+                </div>
+                  <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- End of View Reach -->
+
+        <!-- ========== Posts Reach ========== -->
+         <div class="container">
+            <div class="row">
+              <div class="col-post-reach">
+                    <div>
+                      <p class="title">Post Reach</p>
+                    </div>
+                    <div class="select">
+                      <select onchange="updateTime(this)">
+                        <option value="day">Daily</option>
+                        <option value="week">Weekly</option>
+                        <option value="month">Monthly</option>
+                      </select>
+                    </div>
+                   <canvas id="myChart"></canvas>
+               </div>
+            </div>
+        </div>
+        <!-- End of Posts Reach -->
+
+        <!-- ========== Top Post table ========== -->
+        <div class="container">
+              <!-- title -->
+              <div class="row">
+                <div class="col-top-post">
+                       <div>
+                          <p class="title">Top Posts</p>
+                       </div>
+                </div>
+              </div>
+              <!-- End of title -->
+
+                    <!-- table -->
+                    <div class="table-top-posts">
+                        <table>
+                          <!-- table head -->
+                          <thead>
+                            <tr>
+                              <th>
+                                <p class="title-table">No</p>
+                              </th>
+                              <th>
+                                <p class="title-table">Posts</p>
+                              </th>
+                              <th>
+                                <p class="title-table">Author</p>
+                              </th>
+                              <th>
+                                <p class="title-table">Date</p>
+                              </th>
+                              <th>
+                                <p class="title-table">Like</p>
+                              </th>
+                            </tr>
+                          </thead>
+                          <!-- End of table head -->
+
+                          <!-- table body -->
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="list-of-post">
+                                  <p class="text">01</p>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="posts">
+                                  <div class="image">
+                                    <img
+                                      src="assets/post.png"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <p class="title-of-post">Tom and Jerry</p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="text">Panda Yan</p>
+                              </td>
+                              <td>
+                                <p class="text">10/4/2023</p>
+                              </td>
+                              <td>
+                                <p class="text">5555</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="number-of-post">
+                                  <p class="text">02</p>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="posts">
+                                  <div class="image">
+                                    <img
+                                    src="assets/post.png"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <p class="title-of-post">Tom and Jerray in House</p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="text">Panda Yan</p>
+                              </td>
+                              <td>
+                                <p class="text">10/4/2023</p>
+                              </td>
+                              <td>
+                                <p class="text">5555</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="number-of-post">
+                                  <p class="text">03</p>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="posts">
+                                  <div class="image">
+                                    <img
+                                    src="assets/post.png"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <p class="title-of-post">Arm Chair</p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="text">Panda Yan</p>
+                              </td>
+                              <td>
+                                <p class="text">10/4/2023</p>
+                              </td>
+                              <td>
+                                <p class="text">5555</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="number-of-post">
+                                  <p class="text">04</p>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="posts">
+                                  <div class="image">
+                                    <img
+                                    src="assets/post.png"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <p class="title-of-post">Arm Chair</p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="text">Panda Yan</p>
+                              </td>
+                              <td>
+                                <p class="text">10/4/2023</p>
+                              </td>
+                              <td>
+                                <p class="text">5555</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                          <!-- table body -->
+                        </table>
+                    </div>
+                    <!-- End of table -->
+
+                        <!-- ========== View More ========== -->
+                        <div class="row">
+                          <div class="col-view-more">
+                            <p class="view-more">View More...</p>
+                          </div>
+                        </div>
+                        <!-- End of view more -->
+             </div>
+             <!-- End of Top Post table  -->
+             
+    </div>
+    <!-- End section -->
+
+    </main>
+    <script src="https://kit.fontawesome.com/27fa9359fc.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="component/chart/line-chart.js"></script>
+    <script type="text/javascript" src="component/chart/column-chart.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script type="text/javascript" src="component/chart/post-reach-graph.js"></script>
+    <script type="text/javascript" src="component/chart/view-reach-graph.js"></script>
+  </body>
+</html>
