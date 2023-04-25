@@ -136,7 +136,7 @@ const toggleLike = () => {
 // BACK BUTTON
 const backBtn = document.getElementById("backBtn");
 backBtn.addEventListener('click', () => {
-  window.location.href = '/HomePage.html';
+  window.location.href = '/';
 });
 
 
