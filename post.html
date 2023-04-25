@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Detail</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/post.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
+</head>
+
+<body>
+  <div id="postWrapper">
+    <button id="backBtn">
+      Back
+    </button>
+    <div id="postPanel">
+      <button id="optionBtn" class="iconWrapper" onclick="toggleShowOption()">
+        <i class="fa fa-ellipsis-h postIcon"></i>
+      </button>
+      <ul id="optionsList">
+        <li class="option" onclick="showEdit()">Edit post</li>
+        <li class="option" onclick="showDelete()">Delete post</li>
+      </ul>
+      <section id="topSection">
+        <img id="profilePic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg" alt="profile pic" />
+        <div id="userInfo">
+          <h2 id="userName">Marley</h2>
+          <p id="userBio">Tatakae | Tatakae | Tatakae</p>
+        </div>
+      </section>
+      <section id="contentSection">
+        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+        <textarea id="captionInput" type="text" placeholder="Write caption..." rows="5"></textarea>
+        <div id="editBar">
+          <button id="saveBtn" class="editBtn" onclick="saveEdit()">Save</button>
+          <button id="cancelBtn" class="editBtn" onclick="closeEdit()">Cancel</button>
+        </div>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="slideImg" src="https://wallpaperaccess.com/full/2602042.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img class="slideImg"
+              src="https://afar.brightspotcdn.com/dims4/default/a69e584/2147483647/strip/true/crop/1357x720+41+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2Fcf%2F8a%2F20b4a2c544a58be93512ad67084c%2Fbohler-japankk-4006.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img class="slideImg"
+              src="https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/heroImage1/PowerfulReasons_hero.jpg">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div id="likesAndComments">
+          <p id="likesText" class="likesAndCommentsDataText">696 likes</p>
+          <p id="commentsText" class="likesAndCommentsDataText">123 comments</p>
+        </div>
+      </section>
+      <hr>
+      <section id="bottomSection">
+        <div id="likeAndCommentBar">
+          <div class="iconWrapper" onclick="toggleLike()">
+            <i id="likeIcon" class="fa fa-heart postIcon outlinedIcon"></i>
+          </div>
+          <div class="iconWrapper">
+            <i class="fa fa-comment postIcon outlinedIcon"></i>
+          </div>
+        </div>
+        <div id="commentList">
+          <!-- <div class="commentWrapper">
+            <img class="commentPic" src="https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg" alt="profile pic">
+            <div class="comment">
+              <h2 class="commentUserName">Marley</h2>
+              <p class="commentText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+          </div> -->
+        </div>
+        <div id="currentUserCommentBar">
+          <img class="commentPic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg"
+            alt="profile pic" />
+          <input id="commentInput" type="text" placeholder="Write a comment...">
+          <button id="sendBtn" class="iconWrapper">
+            <i id="sendIcon" class="fa fa-paper-plane"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- DELETE CONFIRMATION POPUP -->
+      <div id="confirmModal" class="popUpModal">
+        <div class="modalContent">
+          <p id="modalText">Are you sure you want to delete this post?</p>
+          <div id="modalButtons">
+            <button id="confirmDeleteBtn" class="modalBtn" onclick="deletePost()">Yes</button>
+            <button id="cancelDeleteBtn" class="modalBtn" onclick="closeDelete()">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/post.js"></script>
+</body>
+
+</html>
