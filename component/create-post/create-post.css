@@ -1,5 +1,4 @@
 /* Write Post */
-
 .write-post-container {
   position: absolute;
   left: 20em;
@@ -19,7 +18,6 @@
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .profile-name-container p {
   font-weight: 500;
   margin-block-start:0 !important;
