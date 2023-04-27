@@ -16,7 +16,9 @@
 </head>
 
 <body>
-  <div id="postWrapper">
+  <!-- <header-section></header-section>
+  <side-navigation></side-navigation> -->
+  <main id="postWrapper">
     <button id="backBtn">
       Back
     </button>
@@ -30,13 +32,14 @@
       </ul>
       <section id="topSection">
         <img id="profilePic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg" alt="profile pic" />
-        <div id="userInfo">
+        <div id="topInfo">
           <h2 id="userName">Marley</h2>
-          <p id="userBio">Tatakae | Tatakae | Tatakae</p>
+          <p id="postDate">April 9 2023, 13:40 pm</p>
         </div>
       </section>
       <section id="contentSection">
-        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+        <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        </p>
         <textarea id="captionInput" type="text" placeholder="Write caption..." rows="5"></textarea>
         <div id="editBar">
           <button id="saveBtn" class="editBtn" onclick="saveEdit()">Save</button>
@@ -88,16 +91,10 @@
           </div>
         </div>
         <div id="commentList">
-          <!-- <div class="commentWrapper">
-            <img class="commentPic" src="https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg" alt="profile pic">
-            <div class="comment">
-              <h2 class="commentUserName">Marley</h2>
-              <p class="commentText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-          </div> -->
         </div>
         <div id="currentUserCommentBar">
-          <img class="commentPic" src="https://i1.sndcdn.com/artworks-000256931612-j7yv80-t500x500.jpg"
+          <img class="commentPic"
+            src="https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg"
             alt="profile pic" />
           <input id="commentInput" type="text" placeholder="Write a comment...">
           <button id="sendBtn" class="iconWrapper">
@@ -117,7 +114,20 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <!-- Import all the components -->
+  <script type="module" src="component/header/header.js"></script>
+  <script type="module" src="component/side-navigation/side-navigation.js"></script>
+  <script type="module" src="component/create-post/create-post.js"></script>
+  <script type="module" src="component/post-profile/post-profile.js"></script>
+  <script type="module" src="component/post-text/post-content.js"></script>
+  <script type="module" src="component/post-like-comment/likecomment.js"></script>
+  <script type="module" src="component/post-content-slider/slider.js"></script>
+  <script src="https://kit.fontawesome.com/27fa9359fc.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="component/chart/post-reach-graph.js"></script>
+  <script type="text/javascript" src="component/chart/view-reach-graph.js"></script>
+  <!-- Import post script -->
   <script src="scripts/post.js"></script>
 </body>
 
