@@ -65,14 +65,28 @@ comments.forEach(comment => { // add all comments into html
 const commentInput = document.getElementById('commentInput');
 const sendBtn = document.getElementById('sendBtn');
 
-sendBtn.addEventListener('click', () => {
+const submitComment = () => {
   const inputValue = commentInput.value;
+  if(inputValue === "") return; // prevent submit when input value is empty
+
   addComment(
     "Current User Name",
     inputValue,
     "https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg"
   );
   commentInput.value = "";
+}
+
+commentInput.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    event.preventDefault();
+    submitComment();
+  }
+});
+
+sendBtn.addEventListener('click', () => {
+  submitComment();
 });
 
 
@@ -191,3 +205,14 @@ const deletePost = () => {
   closeDelete();
   alert("You deleted the post");
 }
+
+
+// TOGGLE OPEN AND CLOSE COMMENT
+const commentList = document.getElementById("commentList");
+let openComment = true;
+
+const toggleComment = () => {
+  openComment = !openComment;
+  commentList.style.display = openComment ? "flex" : "none";
+}
+
