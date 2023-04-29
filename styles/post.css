@@ -8,7 +8,6 @@
 }
 
 #backBtn {
-  background-color: var(--light-purple);
   cursor: pointer;
   font-size: large;
   padding: 10px 20px;
@@ -39,6 +38,22 @@
 
 #optionBtn:hover {
   background-color: var(--hover-grey);
+}
+
+.blueBtn {
+  background-color: var(--background-blue);
+  transition: all 0.3s ease;
+}
+.blueBtn:hover {
+  background-color: var(--hover-blue);
+}
+
+.purpleBtn {
+  background-color: var(--light-purple);
+  transition: all 0.3s ease;
+}
+.purpleBtn:hover {
+  background-color: var(--hover-purple);
 }
 
 /********* TOP SECTION *********/
@@ -90,13 +105,13 @@
   font-size: 14px;
 }
 
-#saveBtn {
+/* #saveBtn {
   background-color: var(--light-purple);
-}
+} */
 
-#cancelBtn {
+/* #cancelBtn {
   background-color: var(--background-blue);
-}
+} */
 
 #postImage {
   width: 100%;
@@ -195,7 +210,6 @@
 }
 
 #sendBtn {
-  background-color: var(--background-blue);
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -296,7 +310,7 @@
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* image slides dots */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -307,18 +321,16 @@
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active,
 .dot:hover {
   background-color: #717171;
 }
 
-/* Fading animation */
+/* fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @keyframes fade {
   from {
     opacity: .4
@@ -328,10 +340,8 @@
     opacity: 1
   }
 }
-
-/* On smaller screens, decrease text size */
+/* on smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-
   .prev,
   .next,
   .text {
@@ -406,10 +416,10 @@
   border-radius: 5px;
 }
 
-#confirmDeleteBtn {
+/* #confirmDeleteBtn {
   background-color: var(--light-purple);
 }
 
 #cancelDeleteBtn {
   background-color: var(--background-blue);
-}
+} */
