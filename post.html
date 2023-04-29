@@ -23,6 +23,8 @@
       Back
     </button>
     <div id="postPanel">
+
+      <!-- TOP SECTION -->
       <button id="optionBtn" class="iconWrapper" onclick="toggleShowOption()">
         <i class="fa fa-ellipsis-h postIcon"></i>
       </button>
@@ -37,6 +39,8 @@
           <p id="postDate">April 9 2023, 13:40 pm</p>
         </div>
       </section>
+
+      <!-- POST CONTENT SECTION -->
       <section id="contentSection">
         <p id="caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
         </p>
@@ -81,16 +85,25 @@
         </div>
       </section>
       <hr>
+
+      <!-- LIKE AND COMMENT SECTION -->
       <section id="bottomSection">
         <div id="likeAndCommentBar">
           <div class="iconWrapper" onclick="toggleLike()">
             <i id="likeIcon" class="fa fa-heart postIcon outlinedIcon"></i>
           </div>
-          <div class="iconWrapper">
-            <i class="fa fa-comment postIcon outlinedIcon"></i>
+          <div class="iconWrapper" onclick="toggleComment()">
+            <i id="commentIcon" class="fa fa-comment postIcon outlinedIcon"></i>
           </div>
         </div>
         <div id="commentList">
+          <!-- <div class="commentWrapper">
+            <img class="commentPic" src="https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg" alt="profile pic">
+            <div class="comment">
+              <h2 class="commentUserName">Marley</h2>
+              <p class="commentText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+          </div> -->
         </div>
         <div id="currentUserCommentBar">
           <img class="commentPic"
@@ -117,7 +130,7 @@
   </main>
 
   <!-- Import all the components -->
-  <script type="module" src="component/header/header.js"></script>
+  <!-- <script type="module" src="component/header/header.js"></script>
   <script type="module" src="component/side-navigation/side-navigation.js"></script>
   <script type="module" src="component/create-post/create-post.js"></script>
   <script type="module" src="component/post-profile/post-profile.js"></script>
@@ -126,7 +139,8 @@
   <script type="module" src="component/post-content-slider/slider.js"></script>
   <script src="https://kit.fontawesome.com/27fa9359fc.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="component/chart/post-reach-graph.js"></script>
-  <script type="text/javascript" src="component/chart/view-reach-graph.js"></script>
+  <script type="text/javascript" src="component/chart/view-reach-graph.js"></script> -->
+
   <!-- Import post script -->
   <script src="scripts/post.js"></script>
 </body>

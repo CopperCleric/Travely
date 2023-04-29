@@ -205,3 +205,14 @@ const deletePost = () => {
   closeDelete();
   alert("You deleted the post");
 }
+
+
+// TOGGLE OPEN AND CLOSE COMMENT
+const commentList = document.getElementById("commentList");
+let openComment = true;
+
+const toggleComment = () => {
+  openComment = !openComment;
+  commentList.style.display = openComment ? "flex" : "none";
+}
+
