@@ -13,62 +13,101 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
     rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
-  <script type="module" src="scripts/profile.js"></script>
+  
 </head>
 
 <body>
-  <div class="photo_container">
-    <div class="photo" style="text-align: center;"> 
-      <img src="/assets/profile.jpg">
-      <div class="icon">
-        <img src="/assets/change_img.png">
-      </div>
-    </div>
-  </div>
-   
-  <div class="content_container">
-    <div class="info_container">
-      <div class="personal_container">
-        <div class="details_title">Personal Details</div>
-      </div>
-      <hr>
-      <div class="details_container">
-        <div class="row">
-          <div class="column_1">
-            <p>Username</p>
-            <p>Email</p>
-            <p>Gender</p>
-            <p>Date of Birth</p>
-            <p>Date Joined</p>
-          </div>
-
-          <div class="column_2">
-            <p>Steve Rogers</p>
-            <p>steverogers@gmail.com</p>
-            <p>Male</p>
-            <p>12/5/2000</p>
-            <p>4/7/2019</p>
-          </div>
-
-          <button type="button" class="edit_btn_holder">Edit Profile</button>
+  <div id="wrapper">
+    <div class="photo_container">
+      <div class="photo" id="pic" style="text-align: center;"> 
+        <img src="/assets/profile.jpg">
+        <div class="overlay">
+          <button class="change-btn">Change Picture</button>
+          <input type="file" id="profile-pic" accept="image/*">
         </div>
-
+      
+        
       </div>
     </div>
     
-    <div class="left_container">
-      <div class="post-input-container">
-          <textarea
-            rows="3"
-            placeholder="What's on your mind, Steve?"
-          ></textarea>
+    <div class="content_container">
+      <div class="info_container">
+        <div class="personal_container">
+          <div class="details_title">Personal Details</div>
+        </div>
+        <hr>
+        <div class="details_container">
+          <div class="row">
+            <div class="column_1">
+              <p>Username</p><br>
+              <p>Email</p><br>
+              <p>Gender</p><br>
+              <p>Date of Birth</p><br>
+              <p>Date Joined</p><br>
+            </div>
+
+            <div class="column_2">
+              <div id="namearea">Steve Rogers</div><br>
+
+              <div id="emailarea">steverogers@gmail.com</div><br>
+
+              <div id="genderarea">Male</div><br>
+
+              <div id="DOBarea">12/5/2000</div><br>
+
+              <div id="DJoinedarea">4/7/2019</div><br>
+           
+            </div>
+
+            <button type="button" id="edit_btn_holder">Edit Profile</button>
+
+            <div id="editModal" class="editmodal_container">
+              <div class="editmodal_content">
+                
+                <form class="editProfile">
+
+                  <span class="close">&times;</span>
+                  
+                  <div class="input_container">
+                    <br><br><br><br><br>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required><br><br>
+          
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required><br><br>
+          
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                      <option value="Male" selected>Male</option>
+                      <option value="Female" selected>Female</option>
+                    </select><br><br>
+          
+                    <label for="DOB">Date of Birth</label>
+                    <input type="date" id="DOB" name="DOB"><br><br>
+          
+                    <label for="DJoined">Date Joined</label>
+                    <input type="date" id="DJoined" name="DJoined"><br><br>
+
+                  </div>
+        
+                  <button type="button" id="done_button" onclick="saveNewInfo()">Done</button>
+                </form>
+              </div>
+            </div>
+
+            
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="left_container">
+        <div class="post-input-container">
+          <textarea rows="3" placeholder="What's on your mind, Steve?"></textarea>
           <div class="add-post-links">
             <a href="#" class="function-container">
               <div>
-                <i
-                  class="fa-regular fa-face-laugh-beam"
-                  id="icon-background"
-                ></i>
+                <i class="fa-regular fa-face-laugh-beam" id="icon-background"></i>
               </div>
               <span>Feeling</span>
             </a>
@@ -86,102 +125,103 @@
             </a>
           </div>
         </div>
-      </div>
-
-      <div class="manage_container">
-        <div class="manage_title">
-          <p>Posts</p>
-        </div>
         
-        <button type="button" class="manage_btn_holder">
-          <p class="manage_text">Manage Posts</p>
-        </button>
+        <div class="manage_container">
+          <div class="manage_title">
+            <p>Posts</p>
+          </div>
+            
+          <button type="button" class="manage_btn_holder">
+            <p class="manage_text">Manage Posts</p>
+          </button>
 
-      </div>
+        </div>
 
-      <div class="post-container">
-        <div class="single-user-post-container">
-          <div class="profile-name-container">
-            <img src="/assets/profile.jpg" />
-            <div>
-              <p>Steve Rogers</p>
-              <small>April 9 2023, 13:40 pm</small>
+        <div class="post-container">
+          <div class="single-user-post-container">
+            <div class="profile-name-container">
+              <img src="/assets/profile.jpg" />
+              <div>
+                <p>Steve Rogers</p>
+                <small>April 9 2023, 13:40 pm</small>
+              </div>
             </div>
-          </div>
 
-          <div class="read-more-container">
-            <p class="post-text">
-              Hey everyone! I'm currently in the beautiful city of Barcelona and
-              I just had to share my experience with you all. This place is
-              simply magical!
-              <span class="read-more-text">
-                The city is bursting with life, color, and culture.
-              </span>
-            </p>
-            <span class="read-more-btn">Read More..</span>
-          </div>
-
-          <!-- image slider start-->
-          <div class="slider">
-            <div class="slides">
-              <!-- radio button start-->
-              <input type="radio" name="radio-btn" id="radio1" />
-              <input type="radio" name="radio-btn" id="radio2" />
-              <input type="radio" name="radio-btn" id="radio3" />
-              <input type="radio" name="radio-btn" id="radio4" />
-
-              <!-- radio button end-->
-
-              <!--slide images start-->
-              <div class="slide first">
-                <img src="/assets/profile.jpg" alt="" />
-              </div>
-              <div class="slide">
-                <img src="/assets/profile.jpg" alt="" />
-              </div>
-              <div class="slide">
-                <img src="/assets/profile.jpg" alt="" />
-              </div>
-              <div class="slide">
-                <img src="/assets/profile.jpg" alt="" />
-              </div>
-              <!-- slide images end-->
+            <div class="read-more-container">
+              <p class="post-text">
+                Hey everyone! I'm currently in the beautiful city of Barcelona and
+                I just had to share my experience with you all. This place is
+                simply magical!
+                <span class="read-more-text">
+                  The city is bursting with life, color, and culture.
+                </span>
+              </p>
+              <span class="read-more-btn">Read More..</span>
             </div>
-            <!-- manual navigation start-->
-            <div class="navigation-manual">
-              <label for="radio1" class="manual-btn"></label>
-              <label for="radio2" class="manual-btn"></label>
-              <label for="radio3" class="manual-btn"></label>
-              <label for="radio4" class="manual-btn"></label>
+
+            <!-- image slider start-->
+            <div class="slider">
+              <div class="slides">
+                <!-- radio button start-->
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+
+                <!-- radio button end-->
+
+                <!--slide images start-->
+                <div class="slide first">
+                  <img src="/assets/profile.jpg" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="/assets/profile.jpg" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="/assets/profile.jpg" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="/assets/profile.jpg" alt="" />
+                </div>
+                <!-- slide images end-->
+              </div>
+              <!-- manual navigation start-->
+              <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+              </div>
+              <!-- manual navigation end-->
             </div>
-            <!-- manual navigation end-->
-          </div>
-          <!-- image slider ends-->
+            <!-- image slider ends-->
 
-          <!-- show like and comment-->
-          <div class="like-comment-container">
-            <p>100 likes</p>
-            <p>10 comments</p>
-          </div>
-          <hr class="line-break" />
+            <!-- show like and comment-->
+            <div class="like-comment-container">
+              <p>100 likes</p>
+              <p>10 comments</p>
+            </div>
+            <hr class="line-break" />
 
-          <!-- display like,comment and share icon-->
-          <div class="like-comment-share-container">
-            <ul class="icon-list">
-              <li><i class="fa-regular fa-heart"></i></li>
-              <span>Likes</span>
-            </ul>
-            <ul class="icon-list">
-              <li><i class="fa-regular fa-comment-dots"></i></li>
-              <span>Comments</span>
-            </ul>
-            <ul class="icon-list">
-              <li><i class="fa-solid fa-arrow-up-from-bracket"></i></i></li>
-              <span>Share</span>
-            </ul>
+            <!-- display like,comment and share icon-->
+            <div class="like-comment-share-container">
+              <ul class="icon-list">
+                <li><i class="fa-regular fa-heart"></i></li>
+                <span>Likes</span>
+              </ul>
+              <ul class="icon-list">
+                <li><i class="fa-regular fa-comment-dots"></i></li>
+                <span>Comments</span>
+              </ul>
+              <ul class="icon-list">
+                <li><i class="fa-solid fa-arrow-up-from-bracket"></i></i></li>
+                <span>Share</span>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+    
 
       <div class="right_container">
 
@@ -189,10 +229,13 @@
           <div class="places_title">
             <p class="places_text">Places visited</p>
             <button type="button" class="places_btn">Edit</button>
+            
             <hr>
+              
           </div>
-
+          <!--
           <div class="places_type">
+            
             <div class="row">
               <div class="column_1">
                 <img src="Travely/assets/Bali.jpeg">
@@ -205,19 +248,24 @@
               </div>
             </div>
           </div>
+        -->
+        </div>
+              
         <div class="ld_btns_container">  
           <div class="logout_btn_container">
             <button type="button" id="logout_btn">Log Out</button>
           </div>
-          
+            
           <div class="delete_btn_container">
             <button type="button" id="delete_btn">Delete Account</button>
           </div>
         </div> 
-    
+      
       </div>
     </div>
   </div>
+
+  <script type="text/javascript" src="scripts/profile.js"></script>
 
 
 </body>
