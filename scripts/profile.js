@@ -4,6 +4,12 @@ var spanEditProfile = document.getElementsByClassName("close")[0];
 var btnDone = document.getElementById("done_button");
 var profilePicInput = document.getElementById('profile-pic');
 var profilePic = document.querySelector('.photo img');
+var modalPlaces = document.getElementById("placesModal");
+var btnPlaces = document.getElementById("places_btn");
+var placesList = document.getElementById("places-list");
+var newItemInput = document.getElementById("new-item-input");
+var addBtn = document.getElementById("add-btn");
+//var spanPlaces = document.getElementsByClassName("close")[0];
 
 profilePicInput.addEventListener('change', function() {
   const file = this.files[0];
@@ -26,13 +32,48 @@ btnEditProfile.onclick = function(){
 
 spanEditProfile.onclick = function(){
     modalEditProfile.style.display = "none";
+    
 }
 
 window.onclick = function(event){
     if(event.target == modalEditProfile){
         modalEditProfile.style.display = "none";
     }
+
+    
 }
+
+btnPlaces.onclick = function(){
+    modalPlaces.style.display = "none";
+}
+
+spanPlaces.onclick = function(){
+    modalPlaces.style.display = "none";
+    
+}
+
+if(event.target == modalPlaces){
+    modalPlaces.style.display = "none";
+}
+
+
+
+
+
+addBtn.onclick = function() {
+    var newItem = document.createElement("li");
+    var textNode = document.createTextNode(newItemInput.value);
+    newItem.appendChild(textNode);
+    placesList.appendChild(newItem);
+    modalPlaces.style.display = "none";
+  }
+  
+  // Delete an item from the list
+  placesList.onclick = function(event) {
+    if (event.target.tagName == "LI") {
+      event.target.parentNode.removeChild(event.target);
+    }
+  }
 
 function saveNewInfo(){
     var usernamenew = document.getElementById("username").value;
@@ -54,6 +95,11 @@ function saveNewInfo(){
     divDJoined.innerHTML = DJoinednew;
 
 }
+
+
+   
+
+
 
 
 
