@@ -17,10 +17,7 @@ template.innerHTML = `
   <li><i class="fa-regular fa-comment-dots"></i></li>
   <span>Comments</span>
 </ul>
-<ul class="icon-list">
-  <li><i class="fa-solid fa-arrow-up-from-bracket"></i></i></li>
-  <span>Share</span>
-</ul>
+
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 `;

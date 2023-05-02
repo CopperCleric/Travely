@@ -23,10 +23,7 @@ template.innerHTML = `
 
     <div class="icon-container">
       <ul>
-
-        <li class="list-item"><i class="fa-regular fa-bell"></i></li>
-        <li class="list-item"><i class="fa-solid fa-gear"></i></li>
-        <li class="list-item"><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+        <a href="login.html"><li class="list-item"><i class="fa-solid fa-arrow-right-from-bracket"></i></li></a>
       </ul>
     </div>
   </div>
