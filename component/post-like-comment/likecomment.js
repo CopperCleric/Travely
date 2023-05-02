@@ -8,17 +8,16 @@ template.innerHTML = `
 <hr class="line-break" />
 
 <!-- display like,comment and share icon-->
-<div class="like-comment-share-container">
-<ul class="icon-list" >
-  <li id="like-animation"><i class="fa-regular fa-heart"></i></li>
-  <span>Likes</span>
+<ul class="like-comment-share-container">
+    <a class="icon-list" >
+      <li id="like-animation"><i class="fa-regular fa-heart"></i></li>
+      <span>Like</span>
+    </a>
+    <a class="icon-list" id="comment">
+      <li><i class="fa-regular fa-comment-dots"></i></li>
+      <span>Comment</span>
+    </a>
 </ul>
-<ul class="icon-list">
-  <li><i class="fa-regular fa-comment-dots"></i></li>
-  <span>Comments</span>
-</ul>
-
-</div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 `;
 
@@ -57,6 +56,13 @@ class likecomment extends HTMLElement {
       this.setAttribute('like', likeAmount);
       displayLikes.textContent = `${likeAmount} likes`;
     });
+
+
+    //navigation when click comment
+    const openPost = this.shadowRoot.getElementById("comment");
+    openPost.addEventListener("click", event=>{
+      window.location.href = '/post.html';
+    })
 
     
   }
