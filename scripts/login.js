@@ -19,6 +19,6 @@ loginForm.addEventListener('submit', (event) => {
   }
 
   // Submit the form if all constraints pass
-  loginForm.submit();
+  loginForm.submit();  
 });
 

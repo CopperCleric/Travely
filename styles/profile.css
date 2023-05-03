@@ -123,7 +123,7 @@ font-weight: bold;
   clear: both;
 }
 
-#edit_btn_holder{
+#edit_btn{
 border-radius: 20px;
 width: 130px;
 height: 35px;
@@ -164,6 +164,12 @@ font-weight: bold;
   font-size: 28px;
   font-weight: bold;
   margin-left: 10px;
+  /*
+  position:absolute;
+  top:0;
+  left:0;
+  padding:10px;
+  */
 }
 
 .close:hover,
@@ -184,6 +190,7 @@ font-weight: bold;
   display: table-cell;
   vertical-align: bottom;
   margin-bottom: 10px;
+
 }
 
 label{
@@ -478,7 +485,7 @@ padding: 15px;
 display: inline-block;
 }
 
-.places_btn{
+#places_btn{
 display: inline-block;
 margin-left: 100px;
 background-color: #DED7FB;
@@ -488,30 +495,77 @@ height:30px;
 border-radius: 20px;
 }
 
+.places_type{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
 .places_title hr{
 width: 97%;
 margin: 0 auto;
 }
 
 .places_type ul{
-list-style-type: none;
+  list-style-position: inside;
 }
 
-.places_type img{
-float: left;
-width: 100px;
-height: 100px;
-padding: 20px;
-
+.places_type ul li{
+  margin-bottom: 10px;
 }
 
-.Bali{
-padding-top: 40px;
-
+.placesmodal_container{
+  
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 130px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
-.Australia{
-padding-top: 80px;
+.placesmodal_content {
+  position: relative;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; 
+  background-color: #DED7FB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+}
+
+.placesmodal_content .close{
+  
+  position:absolute;
+  top:5px;
+  left:10px;
+  padding:10px;
+  
+}
+
+#add_title{
+  color:black;
+  margin-bottom: 10px;
+}
+
+#new-item-input{
+  margin-bottom: 10px;
+}
+
+#add-btn{
+  background-color: #ded7fb;
+  border-radius: 17px;
+  width: 75px;
+  font-weight: bold;
+
 }
 
 .logout_btn_container{
@@ -551,22 +605,4 @@ display: inline-block;
 
 .content_container{
 position:relative;
-}
-
-@media screen and (max-width: 1100px) {
-#postPanel {
-  width: 100%;
-}
-}
-
-@media screen and (max-width: 500px) {
-#postPanel {
-  padding: 20px;
-}
-}
-
-@media screen and (max-width: 450px) {
-#postWrapper {
-  padding: 20px;
-}
 }

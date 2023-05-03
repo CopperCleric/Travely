@@ -13,28 +13,27 @@ template.innerHTML = `
 
 <ul class="nav-list">
   <li>
-    <a href="#">
+    <a href="index.html">
+      <i class="fa-solid fa-house"></i>
+      <span class="links_name">Home</span>
+    </a>
+  </li>
+  <li>
+    <a href="profile.html">
       <i class="fa-solid fa-user"></i>
       <span class="links_name">Profile</span>
     </a>
   </li>
 
   <li>
-    <a href="#">
+    <a href="userAnalytics.html">
       <i class="fa-solid fa-chart-simple"></i>
       <span class="links_name">User Analytics</span>
     </a>
   </li>
 
-  <li>
-    <a href="#">
-      <i class="fa-solid fa-gear"></i>
-      <span class="links_name">Settings</span>
-    </a>
-  </li>
-
   <li class="logout-container">
-    <a href="#" class="log-out">
+    <a href="login.html" class="log-out">
       <i class="fa-solid fa-right-from-bracket"></i>
       <span>Log Out</span>
     </a>
