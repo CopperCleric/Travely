@@ -44,6 +44,7 @@
   background-color: var(--background-blue);
   transition: all 0.3s ease;
 }
+
 .blueBtn:hover {
   background-color: var(--hover-blue);
 }
@@ -52,6 +53,7 @@
   background-color: var(--light-purple);
   transition: all 0.3s ease;
 }
+
 .purpleBtn:hover {
   background-color: var(--hover-purple);
 }
@@ -118,14 +120,36 @@
   width: 100%;
 }
 
-#likesAndComments {
+#ratingAndComments {
   display: flex;
   gap: 20px;
 }
 
-.likesAndCommentsDataText {
+.dataText {
   color: var(--grey-text);
   font-size: 14px;
+}
+
+.ratingWrapper {
+  display : flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ratingStars {
+  display: inline-block;
+  font-size: 0;
+}
+
+.ratingStars span {
+  display: inline-block;
+  font-size: 24px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.ratingStars span.selected {
+  color: yellow;
 }
 
 
@@ -136,7 +160,7 @@
   gap: 20px;
 }
 
-#likeAndCommentBar {
+#ratingAndCommentBar {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -322,6 +346,7 @@
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
 .active,
 .dot:hover {
   background-color: #717171;
@@ -332,6 +357,7 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
 @keyframes fade {
   from {
     opacity: .4
@@ -341,8 +367,10 @@
     opacity: 1
   }
 }
+
 /* on smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
+
   .prev,
   .next,
   .text {

@@ -119,32 +119,32 @@ const showSlides = (n) => {
 showSlides(slideIndex);
 
 // LIKE POST FEATURE
-const likesText = document.getElementById('likesText');
-let likes = 69;
-let isLike = false;
+// const ratingText = document.getElementById('ratingText');
+// let likes = 69;
+// let isLike = false;
 
-const refreshLike = () => {
-  likesText.textContent = `${likes} likes`;
-}
-refreshLike();
+// const refreshLike = () => {
+//   ratingText.textContent = `${likes} likes`;
+// }
+// refreshLike();
 
-const toggleLike = () => {
-  isLike = !isLike;
-  const likeIcon = document.getElementById('likeIcon');
+// const toggleLike = () => {
+//   isLike = !isLike;
+//   const likeIcon = document.getElementById('likeIcon');
 
-  if(isLike) { // user like the post
-    likeIcon.classList.add("isLike");
-    likeIcon.classList.remove("outlinedIcon");
-    likes++;
-    refreshLike();
-  }
-  else{ // user cancel like
-    likeIcon.classList.add("outlinedIcon");
-    likeIcon.classList.remove("isLike");
-    likes--;
-    refreshLike();
-  }
-}
+//   if(isLike) { // user like the post
+//     likeIcon.classList.add("isLike");
+//     likeIcon.classList.remove("outlinedIcon");
+//     likes++;
+//     refreshLike();
+//   }
+//   else{ // user cancel like
+//     likeIcon.classList.add("outlinedIcon");
+//     likeIcon.classList.remove("isLike");
+//     likes--;
+//     refreshLike();
+//   }
+// }
 
 
 // BACK BUTTON
@@ -204,6 +204,7 @@ const closeDelete = () => {
 const deletePost = () => {
   closeDelete();
   alert("You deleted the post");
+  window.location.href = '/';
 }
 
 
@@ -215,4 +216,39 @@ const toggleComment = () => {
   openComment = !openComment;
   commentList.style.display = openComment ? "flex" : "none";
 }
+
+// RATING
+const stars = document.querySelectorAll(".ratingStars span");
+let rating = 0;
+
+stars.forEach((star) => {
+  star.addEventListener("click", () => {
+    rating = parseInt(star.id.replace("star", ""));
+    updateStars();
+    console.log(`You've rated ${rating} stars!`);
+  });
+
+  // star.addEventListener("mouseover", () => {
+  //   rating = parseInt(star.id.replace("star", ""));
+  //   updateStars();
+  // });
+
+  // star.addEventListener("mouseout", () => {
+  //   rating = 0;
+  //   updateStars();
+  // });
+});
+
+function updateStars() {
+  stars.forEach((star) => {
+    const starRating = parseInt(star.id.replace("star", ""));
+    if (starRating <= rating) {
+      star.classList.add("selected");
+    } else {
+      star.classList.remove("selected");
+    }
+  });
+}
+
+
 
