@@ -67,6 +67,7 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  object-fit: cover;
 }
 
 #postDate {
@@ -415,11 +416,3 @@
   font-size: 16px;
   border-radius: 5px;
 }
-
-/* #confirmDeleteBtn {
-  background-color: var(--light-purple);
-}
-
-#cancelDeleteBtn {
-  background-color: var(--background-blue);
-} */

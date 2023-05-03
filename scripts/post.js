@@ -8,19 +8,19 @@ const refreshCommentsLength = () => {
 
 const comments = [ // mock data
   {
-    username: 'Eren Yeager',
+    username: 'Saitama',
     text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    imgSrc: 'https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg'
+    imgSrc: 'assets/post.png'
   },
   {
     username: 'Reiner',
-    text: 'fddfsdf dsfdfdsfdsf fsdfdsfsdfdsfsdfsfs fsfsdfdsfsd',
-    imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ruDIuDPXkGAZDENGuJmJEDhDLNHMFK6nQg&usqp=CAU'
+    text: 'Wow good good',
+    imgSrc: 'assets/reiner.jpeg'
   },
   {
     username: 'Bertholdt',
-    text: 'yututyutuy fsdf ',
-    imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIuiIh2DehF_SQoyKZswsl5_T4e_XT1gc1cQ&usqp=CAU'
+    text: 'Awesome place! ',
+    imgSrc: 'assets/bertholdt.jpeg'
   },
 ];
 
@@ -70,9 +70,9 @@ const submitComment = () => {
   if(inputValue === "") return; // prevent submit when input value is empty
 
   addComment(
-    "Current User Name",
+    "Eren",
     inputValue,
-    "https://www.looper.com/img/gallery/the-surprising-number-of-titans-eren-kills-as-a-human-in-attack-on-titan/l-intro-1643171427.jpg"
+    "assets/eren.jpg"
   );
   commentInput.value = "";
 }
