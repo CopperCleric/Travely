@@ -17,10 +17,10 @@
 }
 
 .card-border {
-  border: 8px solid #fff;
+  border: 8px solid #e5ff00;
 }
 .card:hover {
-  border: 8px solid #fff;
+  border: 8px solid #e5ff00;
 }
 .card-img {
   width: 100%;

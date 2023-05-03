@@ -35,6 +35,12 @@ class countryCard extends HTMLElement{
         const card = this.shadowRoot.querySelector(".card");
         this.shadowRoot.querySelector(".btn").addEventListener("click", ()=>{
             card.classList.toggle("card-border");
+            const icon = this.shadowRoot.querySelector("i");
+            if (icon.classList.contains("fa-check")) {
+                icon.classList = "fa-solid fa-x";
+              } else {
+                icon.classList = "fa-solid fa-check";
+            }
         });
 
     };
