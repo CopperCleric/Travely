@@ -4,13 +4,15 @@ var spanEditProfile = modalEditProfile.querySelector(".close");
 var btnDone = document.getElementById("done_button");
 var profilePicInput = document.getElementById('profile-pic');
 var profilePic = document.querySelector('.photo img');
-var modalPlaces = document.getElementById("placesModal");
-var btnPlaces = document.getElementById("places_btn");
-var spanPlaces = placesModal.querySelector(".close");
-var placesList = document.getElementById("places-list");
-var newItemInput = document.getElementById("new-item-input");
-var addBtn = document.getElementById("add-btn");
+//var modalPlaces = document.getElementById("placesModal");
+//var btnPlaces = document.getElementById("places_btn");
+//var spanPlaces = placesModal.querySelector(".close");
+//var placesList = document.getElementById("places-list");
+//var newItemInput = document.getElementById("new-item-input");
+//var addBtn = document.getElementById("add-btn");
+var btnDelete = document.getElementById("delete_btn");
 
+//Change profile picture
 profilePicInput.addEventListener('change', function() {
   const file = this.files[0];
   if (file) {
@@ -22,14 +24,16 @@ profilePicInput.addEventListener('change', function() {
   }
 });
 
+//Show edit profile modal if user clicks "Edit Profile" button
 btnEditProfile.addEventListener("click",function(){
   modalEditProfile.style.display = "block";
 });
 
+//Close the modal if user clicks close icon button
 spanEditProfile.addEventListener("click",function(){
   modalEditProfile.style.display = "none";
 });
-
+/*
 btnPlaces.addEventListener("click",function(){
   modalPlaces.style.display = "block";
 });
@@ -37,21 +41,26 @@ btnPlaces.addEventListener("click",function(){
 spanPlaces.addEventListener("click", function(){
   modalPlaces.style.display = "none";
 });
+*/
 
+//Close the modal if user clicks on any place in the webpage except the modal
 window.addEventListener("click",function(event){
   if(event.target == modalEditProfile){
     modalEditProfile.style.display = "none";
   }
-
+/*
   if(event.target == modalPlaces){
     modalPlaces.style.display = "none";
   }
+  */
 })
 
+//Clicks Done button in the edit profile modal
 btnDone.addEventListener("click", function(){
     modalEditProfile.style.display = "none";
 });
 
+/*
 addBtn.onclick = function() {
   var newItemInput = document.getElementById("new-item-input");
   var newItemText = newItemInput.value.trim();
@@ -87,7 +96,9 @@ addBtn.onclick = function() {
       event.target.parentNode.removeChild(event.target);
     }
   }
+*/
 
+//Save the new information and update it in the personal information container
   function saveNewInfo() {
     var usernamenew = document.getElementById("username").value;
     var emailnew = document.getElementById("email").value;
@@ -137,7 +148,40 @@ addBtn.onclick = function() {
     return re.test(date);
   }
   
-
+  //Delete account
+  btnDelete.addEventListener('click', function() {
+    const confirmed = confirm('Are you sure you want to delete your account?');
+    if (confirmed) {
+      const userId = getUserId(); // Replace with the function that retrieves the user ID
+      deleteAccount(userId);
+    }
+  });
+  
+  function deleteAccount(userId) {
+    // Send a DELETE request to the backend API to delete the user's account
+    fetch(`/api/users/${userId}`, {
+      method: 'DELETE',
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to delete account');
+      }
+      // If the account was deleted successfully, log the user out and redirect to the homepage
+      logout();
+      window.location.href = '/';
+    })
+    .catch(error => {
+      // Handle errors, e.g. display an error message to the user
+      console.error(error);
+    });
+  }
+  
+  function logout() {
+    // Clear the user's session data and log them out
+    sessionStorage.clear();
+    // You may also want to remove any tokens or cookies that were used for authentication
+  }
+  
 
 
 

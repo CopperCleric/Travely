@@ -12,11 +12,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
     rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
-    <script type="module" src="component/side-navigation/side-navigation.js"></script>
-    <link rel="stylesheet" href="component/side-navigation/side-navigation.css">
-    
-  
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+    <script src="component/side-navigation/side-navigation.js" defer></script> 
+    <script src="component/header/header.js" defer></script> 
 </head>
 
 <body>
@@ -25,7 +23,7 @@
     <div id="wrapper">
       <div class="photo_container">
         <div class="photo" id="pic" style="text-align: center;"> 
-          <img src="/assets/profile.jpg">
+          <img src="assets/profile.jpg">
           <div class="overlay">
             <button class="change-btn">Change Picture</button>
             <input type="file" id="profile-pic" accept="image/*">
@@ -105,9 +103,9 @@
 
           </div>
         </div>
-        
+        <!--
         <div class="left_container">
-            
+          
           <div class="post-input-container">
             <textarea rows="3" placeholder="What's on your mind, Steve?"></textarea>
               <div class="add-post-links">
@@ -142,6 +140,7 @@
             </button>
 
           </div>
+        -->
 
           <div class="post-container">
             <div class="single-user-post-container">
@@ -243,12 +242,12 @@
               </div>
             </div>
           </div>
-        -->
+        
         </div>
       
 
         <div class="right_container">
-
+          
           <div class="places_container">
             <div class="places_title">
               <p class="places_text">Places visited</p>
@@ -278,7 +277,7 @@
                 <li>Australia</li>
                 
               </ul>
-              <!--
+              
               <div class="row">
                 <div class="column_1">
                   <img src="Travely/assets/Bali.jpeg">
@@ -290,11 +289,12 @@
                   <p class="Australia">Australia</p>
                 </div>
               </div>
-            -->
+            
             </div>
           
           </div>
-                
+        -->
+        <div class="btns_container">
           <div class="ld_btns_container">  
             <div class="logout_btn_container">
               <button type="button" id="logout_btn">Log Out</button>
@@ -310,7 +310,7 @@
     </div>
   </main>
 
-  <script type="text/javascript" src="scripts/profile.js"></script>
+  <script src="scripts/profile.js"></script>
   
 
 </body>

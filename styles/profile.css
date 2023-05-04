@@ -231,6 +231,7 @@ label:hover{
   text-align: center;
 }
 
+/*
 .left_container{
 display: flex;
 }
@@ -359,6 +360,7 @@ font-size:0.8rem;
 padding:1em;
 
 }
+
 .single-user-post-container{
 background-color: #FFFFFF;
 padding:20px;
@@ -394,6 +396,7 @@ height:80%;
 
 /*slide navigation*/
 
+/*
 .navigation-manual {
 margin-top: -80px;
 display:flex;
@@ -567,13 +570,197 @@ margin: 0 auto;
   font-weight: bold;
 
 }
+*/
+
+.post-container {
+  position: absolute;
+  margin-top: 12em;
+  margin-left:25em;
+  width:50%;
+  height:80%;
+}
+
+.single-user-post-container{
+  background-color: #FFFFFF;
+  padding:20px;
+  border-radius: 6px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+
+.slider{
+  overflow: hidden;
+  text-align: center;
+  margin-top: 1em;
+  height:500px;
+}
+
+.slides{
+  width:500%;  
+  display:flex;
+}
+
+.slide {
+  display: none;
+  width:20%;
+  transition: 2s;
+}
+
+.slide img {
+  width:80%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  left: 83%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  right: 83%;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #ded7fb;
+}
+
+.post-container {
+  position: absolute;
+  margin-top: 1em;
+  margin-left:25em;
+  width:50%;
+  height:80%;
+}
+
+.single-user-post-container{
+  background-color: #FFFFFF;
+  padding:20px;
+  border-radius: 6px;
+  margin-top: 2em;
+}
+
+
+.slider{
+  overflow: hidden;
+  text-align: center;
+  margin-top: 1em;
+  height:500px;
+}
+
+.slides{
+  width:500%;  
+  display:flex;
+}
+
+.slide {
+  display: none;
+  width:20%;
+  transition: 2s;
+}
+
+.slide img {
+  width:80%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  left: 83%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  right: 83%;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #ded7fb;
+}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.btns_container{
+  position: absolute;
+  margin-top: 10em;
+  margin-left: 23em;
+}
 
 .logout_btn_container{
 margin: 40px 0px 10px 20px;
+display: inline-block; 
 }
 
 .delete_btn_container{
 margin: 0px 0px 10px 20px;
+display: inline-block;
 }
 
 #logout_btn{
@@ -594,6 +781,7 @@ color: red;
 font-weight: bold;
 }
 
+/*
 .left_container{
 display: inline-block;
 margin-top: 550px;
@@ -602,6 +790,7 @@ margin-top: 550px;
 .right_container{
 display: inline-block;
 }
+*/
 
 .content_container{
 position:relative;
