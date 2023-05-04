@@ -219,6 +219,7 @@ const toggleComment = () => {
 
 // RATING
 const stars = document.querySelectorAll(".ratingStars span");
+const clearBtn = document.getElementById("clearBtn");
 let rating = 0;
 
 stars.forEach((star) => {
@@ -240,7 +241,7 @@ stars.forEach((star) => {
 });
 
 function updateStars() {
-  stars.forEach((star) => {
+  stars.forEach((star) => { // show color for selected star
     const starRating = parseInt(star.id.replace("star", ""));
     if (starRating <= rating) {
       star.classList.add("selected");
@@ -248,7 +249,19 @@ function updateStars() {
       star.classList.remove("selected");
     }
   });
+
+  if(rating > 0) { // show clear rating button if rating is greater than 0;
+    clearBtn.style.display = "block";
+  }
+  else{
+    clearBtn.style.display = "none";
+  }
 }
+
+clearBtn.addEventListener('click', () => { // clear rating function
+  rating = 0;
+  updateStars();
+});
 
 
 
