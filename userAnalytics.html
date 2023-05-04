@@ -31,7 +31,7 @@
     <side-navigation></side-navigation>
     <main>
         <div class="section">
-          <!---------------- 4 boxes ----------------->
+          <!---------------- 3 boxes ----------------->
           <div class="row">
             <!-- ========== Total Visitors ========== -->
             <div class="column">
@@ -42,8 +42,8 @@
                   />
                   </div>
                   <div class="content">
-                    <p class="total">Daily Visitors</p>
-                    <p class="num">34567</p>
+                    <p class="total">Visitors (Today)</p>
+                    <p class="num">1000</p>
                   </div>
             </div>
             <!-- ========== Total Posts ========== -->
@@ -56,20 +56,7 @@
                   </div>
                   <div class="content">
                     <p class="total">Total Posts</p>
-                    <p class="num">74,567</p>
-                  </div>
-            </div>
-            <!-- ========== Total Likes ========== -->
-            <div class="column">
-                <div class="icon3">
-                    <img
-                    src="assets/total-likes.png"
-                    alt=""
-                  />
-                  </div>
-                  <div class="content">
-                    <p class="total">Total Likes</p>
-                    <p class="num">24,567</p>
+                    <p class="num">14,567</p>
                   </div>
             </div>
             <!-- ========== Rating ========== -->
@@ -86,7 +73,17 @@
                   </div>
             </div>
           </div> 
-          <!-- End of 4 boxes -->
+          <!-- End of 3 boxes -->
+
+          <!--Select daily,weekly, monthly-->
+          <div class="select">
+            <select onchange="updateTimeline(this)">
+                <option value="days">Daily</option>
+                <option value="weeks">Weekly</option>
+                <option value="months">Monthly</option>
+            </select>
+          </div>
+          <!--End select-->
 
         <!-- ========== View Reach ========== -->
           <div class="container">
@@ -95,14 +92,7 @@
                   <div>
                     <p class="title">View Reach</p>
                   </div>
-                <div class="select">
-                  <select onchange="updateTime2(this)">
-                      <option value="days">Daily</option>
-                      <option value="weeks">Weekly</option>
-                      <option value="months">Monthly</option>
-                  </select>
-                </div>
-                  <canvas id="lineChart"></canvas>
+                  <canvas id="viewChart"></canvas>
                 </div>
             </div>
         </div>
@@ -115,14 +105,7 @@
                     <div>
                       <p class="title">Post Reach</p>
                     </div>
-                    <div class="select">
-                      <select onchange="updateTime(this)">
-                        <option value="day">Daily</option>
-                        <option value="week">Weekly</option>
-                        <option value="month">Monthly</option>
-                      </select>
-                    </div>
-                   <canvas id="myChart"></canvas>
+                   <canvas id="postChart"></canvas>
                </div>
             </div>
         </div>
@@ -159,7 +142,7 @@
                                 <p class="title-table">Date</p>
                               </th>
                               <th>
-                                <p class="title-table">Like</p>
+                                <p class="title-table">Rating</p>
                               </th>
                             </tr>
                           </thead>
@@ -181,17 +164,17 @@
                                       alt=""
                                     />
                                   </div>
-                                  <p class="title-of-post">Tom and Jerry</p>
+                                  <p class="title-of-post">China Trip</p>
                                 </div>
                               </td>
                               <td>
-                                <p class="text">Panda Yan</p>
+                                <p class="text">John Doe</p>
                               </td>
                               <td>
                                 <p class="text">10/4/2023</p>
                               </td>
                               <td>
-                                <p class="text">5555</p>
+                                <p class="text">5.0/5.0</p>
                               </td>
                             </tr>
                             <tr>
@@ -208,17 +191,17 @@
                                       alt=""
                                     />
                                   </div>
-                                  <p class="title-of-post">Tom and Jerray in House</p>
+                                  <p class="title-of-post">Brunei Trip</p>
                                 </div>
                               </td>
                               <td>
-                                <p class="text">Panda Yan</p>
+                                <p class="text">Wu Zhao Bo</p>
                               </td>
                               <td>
-                                <p class="text">10/4/2023</p>
+                                <p class="text">5/4/2023</p>
                               </td>
                               <td>
-                                <p class="text">5555</p>
+                                <p class="text">4.9/5.0</p>
                               </td>
                             </tr>
                             <tr>
@@ -235,17 +218,17 @@
                                       alt=""
                                     />
                                   </div>
-                                  <p class="title-of-post">Arm Chair</p>
+                                  <p class="title-of-post">Travel to Thailand</p>
                                 </div>
                               </td>
                               <td>
-                                <p class="text">Panda Yan</p>
+                                <p class="text">Kelvin</p>
                               </td>
                               <td>
-                                <p class="text">10/4/2023</p>
+                                <p class="text">9/4/2023</p>
                               </td>
                               <td>
-                                <p class="text">5555</p>
+                                <p class="text">4.5/5.0</p>
                               </td>
                             </tr>
                             <tr>
@@ -262,17 +245,17 @@
                                       alt=""
                                     />
                                   </div>
-                                  <p class="title-of-post">Arm Chair</p>
+                                  <p class="title-of-post">Taiwan Trip </p>
                                 </div>
                               </td>
                               <td>
-                                <p class="text">Panda Yan</p>
+                                <p class="text">Lily</p>
                               </td>
                               <td>
-                                <p class="text">10/4/2023</p>
+                                <p class="text">1/4/2023</p>
                               </td>
                               <td>
-                                <p class="text">5555</p>
+                                <p class="text">4.3/5.0</p>
                               </td>
                             </tr>
                           </tbody>
@@ -301,7 +284,6 @@
     <script type="text/javascript" src="component/chart/column-chart.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-    <script type="text/javascript" src="component/chart/post-reach-graph.js"></script>
-    <script type="text/javascript" src="component/chart/view-reach-graph.js"></script>
+    <script type="text/javascript" src="component/chart/graphs.js"></script>
   </body>
 </html>
