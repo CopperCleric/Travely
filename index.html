@@ -17,7 +17,7 @@
     <script type="module" src="component/create-post/create-post.js"></script>
     <script type="module" src="component/post-profile/post-profile.js"></script>
     <script type="module" src="component/post-text/post-content.js"></script>
-    <script type="module" src="component/post-like-comment/likecomment.js"></script>
+    <script type="module" src="component/post-rating/rating.js"></script>
     <script type="module" src="component/post-content-slider/slider.js"></script>
     <script type="module" src="component/write-post-model/model.js"></script>
     <!-- End of importing all the components-->
@@ -32,16 +32,17 @@
       <!-- Post Container-->
       <div class="post-container">
         <div class="single-user-post-container">
-          <user-profile name="John Doe" date="April 9 2023, 13:40 pm" profile="assets/profile.jpg"></user-profile>
+          <user-profile name="John Doe" date="April 9 2023, 13:40 pm" profile="assets/profile.jpg" location="Barcelona"></user-profile>
           <post-content text="Hey everyone! I'm currently in the beautiful city of Barcelona and I j"></post-content>
           <post-slider id="abc"></post-slider>
-          <like-comment like=11 comment=12></like-comment>
+          <post-rating rating=3></post-rating>
         </div>        
         <div class="single-user-post-container">
           <user-profile name="Wu Zhao Bo" date="April 9 2023, 2:40 pm" profile="assets/logo.png"></user-profile>
+          <user-profile name="Wu Zhao Bo" date="April 9 2023, 2:40 pm" profile="/assets/logo.png" location="China"></user-profile>
           <post-content text="Hey everyone! I'm currently in the beautiful city of Barcelona and I just had to share my experience with you all. This place is simply magical! Hey everyone! I'm currently in the beautiful city of Barcelona and I just had to share my experience with you all. This place is simply magical!"></post-content>
           <post-slider id="bdc"></post-slider>
-          <like-comment like=1000 comment=100></like-comment>
+          <post-rating rating=5></post-rating>
         </div>  
       </div>
     </main>
