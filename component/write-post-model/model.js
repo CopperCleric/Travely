@@ -13,6 +13,63 @@ template.innerHTML = `
             </div>
           </div>
           <form action="#">
+
+            <div class="select-menu">
+            <div class="select-btn">
+              <span class="sBtn-text">Country</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+              <ul class="options">
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #171515;"></i>
+                  <span class="option-text">Malaysia</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #E1306C;"></i>
+                  <span class="option-text">Australia</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #0E76A8;"></i>
+                  <span class="option-text">France</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #4267B2;"></i>
+                  <span class="option-text">China</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #1DA1F2;"></i>
+                  <span class="option-text">Vietnam</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #2F4F4F;"></i>
+                  <span class="option-text">Egypt</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #00FF7F;"></i>
+                  <span class="option-text">India</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #DC143C;"></i>
+                  <span class="option-text">Italy</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #FFC0CB;"></i>
+                  <span class="option-text">Japan</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #FFA500;"></i>
+                  <span class="option-text">Switzerland</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #00FFFF;"></i>
+                  <span class="option-text">Taiwan</span>
+                </li>
+                <li class="option">
+                  <i class="bx bx-flag" style="color: #800080 ;"></i>
+                  <span class="option-text">USA</span>
+                </li>
+              </ul>
+            </div>
             <textarea
               spellcheck="false"
               placeholder="What's on your mind ?"
@@ -48,7 +105,23 @@ class writePostModal extends HTMLElement {
     const form = this.shadowRoot.querySelector("form"),
       fileInput = this.shadowRoot.querySelector(".file-input"),
       progressArea = this.shadowRoot.querySelector(".progress-area"),
-      uploadedArea = this.shadowRoot.querySelector(".uploaded-area");
+      uploadedArea = this.shadowRoot.querySelector(".uploaded-area"),
+      optionMenu = this.shadowRoot.querySelector(".select-menu"),
+      selectBtn = optionMenu.querySelector(".select-btn"),
+      options = optionMenu.querySelectorAll(".option"),
+      sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+    //dropdown menu
+    selectBtn.addEventListener("click", () =>
+      optionMenu.classList.toggle("active")
+    );
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        let selectedOption = option.querySelector(".option-text").innerText;
+        sBtn_text.innerText = selectedOption;
+        optionMenu.classList.remove("active");
+      });
+    });
 
     // form click event
     form.querySelector(".upload-container").addEventListener("click", () => {
@@ -146,4 +219,3 @@ class writePostModal extends HTMLElement {
 }
 
 window.customElements.define("create-post-modal", writePostModal);
-

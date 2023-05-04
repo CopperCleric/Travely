@@ -14,6 +14,70 @@
   z-index:3;
 }
 
+/**Dropdown menu*/
+.select-menu{
+  max-width:30%;
+  margin-bottom: 2em;
+}
+.select-menu .select-btn{
+  display: flex;
+  height: 30px;
+  background: #fff;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.select-btn i{
+  font-size: 15px;
+  transition: 0.3s;
+}
+.select-menu.active .select-btn i{
+  transform: rotate(-180deg);
+}
+.select-menu .options{
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  display: none;
+  width: 400px;
+  height:200px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.select-menu.active .options{
+  display: block;
+}
+.options .option{
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  border-radius: 8px;
+  align-items: center;
+  background: #fff;
+
+}
+.options .option:hover{
+  background: #F2F2F2;
+}
+.option i{
+  font-size: 15px;
+  margin-right: 12px;
+}
+.option .option-text{
+  font-size: 15px;
+  color: #333;
+}
+
+
 /* pop up box styling */
 #wrapper .popup-outer {
   display: flex;
