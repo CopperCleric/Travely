@@ -99,55 +99,165 @@ addBtn.onclick = function() {
 */
 
 //Save the new information and update it in the personal information container
-  function saveNewInfo() {
-    var usernamenew = document.getElementById("username").value;
-    var emailnew = document.getElementById("email").value;
-    var gendernew = document.getElementById("gender").value;
-    var DOBnew = document.getElementById("DOB").value;
-    var DJoinednew = document.getElementById("DJoined").value;
-  
-    var divusername = document.getElementById("namearea");
-    var divemail = document.getElementById("emailarea");
-    var divgender = document.getElementById("genderarea");
-    var divDOB = document.getElementById("DOBarea");
-    var divDJoined = document.getElementById("DJoinedarea");
-  
-    if (usernamenew.trim() == "" || emailnew.trim() == "" || DOBnew.trim() == "" || DJoinednew.trim() == "") {
-      alert("Please fill in all required fields.");
-      return false;
-    }
-  
-    if (!validateEmail(emailnew)) {
-      alert("Please enter a valid email address.");
-      return false;
-    }
-  
-    if (!validateDate(DOBnew) || !validateDate(DJoinednew)) {
-      alert("Please enter a valid date in the format YYYY-MM-DD.");
-      return false;
-    }
-  
-    divusername.innerHTML = usernamenew;
-    divemail.innerHTML = emailnew;
-    divgender.innerHTML = gendernew;
-    divDOB.innerHTML = DOBnew;
-    divDJoined.innerHTML = DJoinednew;
-  
-    
+function saveNewInfo() {
+  var usernamenew = document.getElementById("username").value;
+  var emailnew = document.getElementById("email").value;
+  var gendernew = document.getElementById("gender").value;
+  var DOBnew = document.getElementById("DOB").value;
+  var DJoinednew = document.getElementById("DJoined").value;
+
+  var divusername = document.getElementById("namearea");
+  var divemail = document.getElementById("emailarea");
+  var divgender = document.getElementById("genderarea");
+  var divDOB = document.getElementById("DOBarea");
+  var divDJoined = document.getElementById("DJoinedarea");
+
+  if (usernamenew.trim() == "") {
+    usernamenew = divusername.innerHTML;
+  }
+  if (emailnew.trim() == "") {
+    emailnew = divemail.innerHTML;
+  }
+  if (gendernew.trim() == "") {
+    gendernew = divgender.innerHTML;
+  }
+  if (DOBnew.trim() == "") {
+    DOBnew = divDOB.innerHTML;
+  }
+  if (DJoinednew.trim() == "") {
+    DJoinednew = divDJoined.innerHTML;
+  }
+
+  if (usernamenew.trim() == "" || emailnew.trim() == "" || DOBnew.trim() == "" || DJoinednew.trim() == "") {
+    alert("Please fill in all required fields.");
+    return false;
   }
   
-  function validateEmail(email) {
-    // Regular expression to validate email address
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
+  if (!validateEmail(emailnew)) {
+    alert("Please enter a valid email address.");
+    return false;
   }
-  
-  function validateDate(date) {
-    // Regular expression to validate date in the format YYYY-MM-DD
-    var re = /^\d{4}-\d{2}-\d{2}$/;
-    return re.test(date);
+
+  if (!validateDate(DOBnew) || !validateDate(DJoinednew)) {
+    alert("Please enter a valid date in the format YYYY-MM-DD.");
+    return false;
   }
-  
+
+  // Update the display of the user information in the HTML
+  divusername.innerHTML = usernamenew;
+  divemail.innerHTML = emailnew;
+  divgender.innerHTML = gendernew;
+  divDOB.innerHTML = DOBnew;
+  divDJoined.innerHTML = DJoinednew;
+}
+
+function validateEmail(email) {
+  // Regular expression to validate email address
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
+function validateDate(date) {
+  // Regular expression to validate date in the format YYYY-MM-DD
+  var re = /^\d{4}-\d{2}-\d{2}$/;
+  return re.test(date);
+}
+
+function displayCurrentUserInfo() {
+  var divusername = document.getElementById("namearea");
+  var divemail = document.getElementById("emailarea");
+  var divgender = document.getElementById("genderarea");
+  var divDOB = document.getElementById("DOBarea");
+  var divDJoined = document.getElementById("DJoinedarea");
+
+  var usernamenew = divusername.innerHTML;
+  var emailnew = divemail.innerHTML;
+  var gendernew = divgender.innerHTML;
+  var DOBnew = divDOB.innerHTML;
+  var DJoinednew = divDJoined.innerHTML;
+
+  var inputUsername = document.getElementById("username");
+  var inputEmail = document.getElementById("email");
+  var inputGender = document.getElementById("gender");
+  var inputDOB = document.getElementById("DOB");
+  var inputDJoined = document.getElementById("DJoined");
+
+  inputUsername.value = usernamenew;
+  inputEmail.value = emailnew;
+  inputGender.value = gendernew;
+  inputDOB.value = DOBnew;
+  inputDJoined.value = DJoinednew;
+
+  inputUsername.addEventListener("mouseover", function() {
+    if (inputUsername.value == usernamenew) {
+      inputUsername.value = "";
+    }
+  });
+  inputEmail.addEventListener("mouseover", function() {
+    if (inputEmail.value == emailnew) {
+      inputEmail.value = "";
+    }
+  });
+  inputGender.addEventListener("mouseover", function() {
+    if (inputGender.value == gendernew) {
+      inputGender.value = "";
+    }
+  });
+  inputDOB.addEventListener("mouseover", function() {
+    if (inputDOB.value == DOBnew) {
+      inputDOB.value = "";
+    }
+  });
+  inputDJoined.addEventListener("mouseover", function() {
+    if (inputDJoined.value == DJoinednew) {
+      inputDJoined.value = "";
+    }
+  });
+
+  inputUsername.addEventListener("mouseout", function() {
+    if (inputUsername.value == "") {
+      inputUsername.value = usernamenew;
+    }
+  });
+  inputEmail.addEventListener("mouseout", function() {
+    if (inputEmail.value == "") {
+      inputEmail.value = emailnew;
+    }
+  });
+  inputGender.addEventListener("mouseout", function() {
+    if (inputGender.value == "") {
+      inputGender.value = gendernew;
+    }
+  });
+  inputDOB.addEventListener("mouseout", function() {
+    if (inputDOB.value == "") {
+      inputDOB.value = DOBnew;
+    }
+  });
+  inputDJoined.addEventListener("mouseout", function() {
+    if (inputDJoined.value == "") {
+      inputDJoined.value = DJoinednew;
+    }
+  });
+
+  inputUsername.addEventListener("click", function() {
+    inputUsername.value = "";
+  });
+  inputEmail.addEventListener("click", function() {
+    inputEmail.value = "";
+  });
+  inputGender.addEventListener("click", function() {
+    inputGender.value = "";
+  });
+  inputDOB.addEventListener("click", function() {
+    inputDOB.value = "";
+  });
+  inputDJoined.addEventListener("click", function() {
+    inputDJoined.value = "";
+  });
+}
+
+
   //Delete account
   btnDelete.addEventListener('click', function() {
     const confirmed = confirm('Are you sure you want to delete your account?');

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile</title>
+  <title>Travely</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/profile.css">
@@ -13,11 +13,18 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
     rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/logo.png" />
-    <script src="component/side-navigation/side-navigation.js" defer></script> 
-    <script src="component/header/header.js" defer></script> 
+    <script type="module" src="component/header/header.js"></script> 
+    <script type="module" src="component/side-navigation/side-navigation.js"></script> 
+    <script type="module" src="component/create-post/create-post.js"></script>
+    <script type="module" src="component/post-profile/post-profile.js"></script>
+    <script type="module" src="component/post-text/post-content.js"></script>
+    <script type="module" src="component/post-rating/rating.js"></script>
+    <script type="module" src="component/post-content-slider/slider.js"></script>
+    <script type="module" src="component/write-post-model/model.js"></script>
 </head>
 
-<body>
+<body onload="displayCurrentUserInfo()">
+  <header-section></header-section>
   <side-navigation></side-navigation>
   <main>
     <div id="wrapper">
@@ -62,7 +69,7 @@
             
               </div>
 
-              <button type="button" id="edit_btn">Edit Profile</button>
+              <button type="button" id="edit_btn" onclick="displayCurrentUserInfo()">Edit Profile</button>
 
               <div id="editModal" class="editmodal_container">
                 <div class="editmodal_content">
@@ -293,13 +300,13 @@
             </div>
           
           </div>
-        -->
+        
         <div class="btns_container">
           <div class="ld_btns_container">  
             <div class="logout_btn_container">
               <button type="button" id="logout_btn">Log Out</button>
             </div>
-              
+          -->      
             <div class="delete_btn_container">
               <button type="button" id="delete_btn">Delete Account</button>
             </div>

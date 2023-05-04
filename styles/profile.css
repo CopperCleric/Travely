@@ -7,6 +7,7 @@
 .photo_container{
   display: flex;
   justify-content: center;
+
 }
 
 .photo {
@@ -16,7 +17,7 @@
 }
 
 .photo img{
-  margin-top: 50px;
+  margin-top: 80px;
   display: block;
   width: 100%;
   height: 100%;
@@ -42,7 +43,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .photo .overlay:hover {
@@ -637,6 +638,7 @@ margin: 0 auto;
   right: 83%;
   border-radius: 3px 0 0 3px;
 }
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: #ded7fb;
@@ -747,6 +749,7 @@ margin: 0 auto;
   .prev, .next,.text {font-size: 11px}
 }
 
+/*
 .btns_container{
   position: absolute;
   margin-top: 10em;
@@ -757,12 +760,14 @@ margin: 0 auto;
 margin: 40px 0px 10px 20px;
 display: inline-block; 
 }
+*/
 
 .delete_btn_container{
-margin: 0px 0px 10px 20px;
-display: inline-block;
+margin-top: 300px;
+margin-left: 600px;
 }
 
+/*
 #logout_btn{
 background-color: #DED7FB;
 width: 360px;
@@ -771,6 +776,7 @@ border-radius: 20px;
 color: red;
 font-weight: bold;
 }
+*/
 
 #delete_btn{
 background-color: #DED7FB;
