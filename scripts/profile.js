@@ -127,11 +127,6 @@ function saveNewInfo() {
   if (DJoinednew.trim() == "") {
     DJoinednew = divDJoined.innerHTML;
   }
-
-  if (usernamenew.trim() == "" || emailnew.trim() == "" || DOBnew.trim() == "" || DJoinednew.trim() == "") {
-    alert("Please fill in all required fields.");
-    return false;
-  }
   
   if (!validateEmail(emailnew)) {
     alert("Please enter a valid email address.");
@@ -256,41 +251,13 @@ function displayCurrentUserInfo() {
     inputDJoined.value = "";
   });
 }
-
-
-  //Delete account
-  btnDelete.addEventListener('click', function() {
-    const confirmed = confirm('Are you sure you want to delete your account?');
-    if (confirmed) {
-      const userId = getUserId(); // Replace with the function that retrieves the user ID
-      deleteAccount(userId);
-    }
-  });
   
-  function deleteAccount(userId) {
-    // Send a DELETE request to the backend API to delete the user's account
-    fetch(`/api/users/${userId}`, {
-      method: 'DELETE',
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Failed to delete account');
-      }
-      // If the account was deleted successfully, log the user out and redirect to the homepage
-      logout();
-      window.location.href = '/';
-    })
-    .catch(error => {
-      // Handle errors, e.g. display an error message to the user
-      console.error(error);
-    });
+btnDelete.onclick = function(){
+  if(window.confirm("Do you confirm to delete account?")){
+    window.location = "register.html";
   }
-  
-  function logout() {
-    // Clear the user's session data and log them out
-    sessionStorage.clear();
-    // You may also want to remove any tokens or cookies that were used for authentication
-  }
+
+}
   
 
 

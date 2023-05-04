@@ -68,8 +68,10 @@
                 <div id="DJoinedarea">4/7/2019</div><br>
             
               </div>
-
+              
               <button type="button" id="edit_btn" onclick="displayCurrentUserInfo()">Edit Profile</button>
+
+              <button type="button" id="delete_btn">Delete Account</button>
 
               <div id="editModal" class="editmodal_container">
                 <div class="editmodal_content">
@@ -104,8 +106,7 @@
                   </form>
                 </div>
               </div>
-
-              
+                   
             </div>
 
           </div>
@@ -149,20 +150,20 @@
           </div>
         -->
 
-          <div class="post-container">
-            <div class="single-user-post-container">
-              <user-profile name="John Doe" date="April 9 2023, 13:40 pm" profile="assets/profile.jpg"></user-profile>
-              <post-content text="Hey everyone! I'm currently in the beautiful city of Barcelona and I j"></post-content>
-              <post-slider id="abc"></post-slider>
-              <like-comment like=11 comment=12></like-comment>
-            </div>        
-            <div class="single-user-post-container">
-              <user-profile name="Wu Zhao Bo" date="April 9 2023, 2:40 pm" profile="assets/logo.png"></user-profile>
-              <post-content text="Hey everyone! I'm currently in the beautiful city of Barcelona and I just had to share my experience with you all. This place is simply magical! Hey everyone! I'm currently in the beautiful city of Barcelona and I just had to share my experience with you all. This place is simply magical!"></post-content>
-              <post-slider id="bdc"></post-slider>
-              <like-comment like=1000 comment=100></like-comment>
-            </div>  
-          </div>
+        <div class="post-container">
+          <div class="single-user-post-container">
+            <user-profile name="Eren" date="April 9 2023, 13:40 pm" profile="assets/eren.jpg" location="Japan"></user-profile>
+            <post-content text="Japan is a fascinating destination that seamlessly blends old-world charm with modern innovation. From the bustling streets of Tokyo to the peaceful temples of Kyoto, there's something for every traveler in this incredible country. Indulge in delicious cuisine, witness breathtaking natural beauty, and immerse yourself in the unique culture and traditions of Japan."></post-content>
+            <post-slider id="abc"></post-slider>
+            <post-rating rating=3></post-rating>
+          </div>        
+          <div class="single-user-post-container">
+            <user-profile name="Megan Williams" date="April 23 2023, 9:45 am" profile="/assets/eren.jpg" location="Australia"></user-profile>
+            <post-content text="I recently visited Sydney and was blown away by the beauty of the city. The Opera House and Harbour Bridge were both amazing to see in person, and I loved exploring the beaches and parks. The local coffee culture was also fantastic, with so many great cafes to choose from. Overall, I highly recommend Sydney as a travel destination!"></post-content>
+            <post-slider id="bdc"></post-slider>
+            <post-rating rating=5></post-rating>
+          </div>  
+        </div>
 
           <!--
           <div class="post-container">
@@ -307,9 +308,7 @@
               <button type="button" id="logout_btn">Log Out</button>
             </div>
           -->      
-            <div class="delete_btn_container">
-              <button type="button" id="delete_btn">Delete Account</button>
-            </div>
+            
           </div> 
         
         </div>
@@ -318,7 +317,6 @@
   </main>
 
   <script src="scripts/profile.js"></script>
-  
 
 </body>
 </html>
