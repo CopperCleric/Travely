@@ -163,10 +163,11 @@ const toggleShowOption = () => {
   optionsList.style.display = showOption ? 'block' : 'none';
 }
 
-
 // EDIT POST
 const caption = document.getElementById("caption");
 const captionInput = document.getElementById("captionInput");
+const locationText = document.getElementById("locationText");
+const locationInput = document.getElementById("locationInput");
 const editBar = document.getElementById("editBar");
 
 const showEdit = () => {
@@ -174,17 +175,31 @@ const showEdit = () => {
   caption.style.display = "none";
   captionInput.value = caption.textContent;
   captionInput.style.display = "block";
+
+  locationText.style.display = "none";
+  locationInput.value = locationText.textContent;
+  locationInput.style.display = "block";
+
   editBar.style.display = "flex";
 }
 
 const closeEdit = () => {
   caption.style.display = "block";
   captionInput.style.display = "none";
+
+  locationText.style.display = "block";
+  locationInput.style.display = "none";
+
   editBar.style.display = "none";
 }
 
 const saveEdit = () => {
+  if(captionInput.value === "" || locationInput.value === ""){
+    alert("Post description and location cannot be empty!");
+    return;
+  }
   caption.textContent = captionInput.value;
+  locationText.textContent = locationInput.value;
   closeEdit();
 }
 

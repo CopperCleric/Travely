@@ -117,6 +117,28 @@
   background-color: var(--background-blue);
 } */
 
+.locationTag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--light-purple);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.locationTag p{
+  font-size: 14px;
+}
+.locationTag i {
+  font-size: 16px;
+}
+.locationTag input {
+  display: none;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
 #postImage {
   width: 100%;
 }
