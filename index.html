@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/search-result.css" />
     <link rel="icon" type="image/x-icon" href="assets/logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
       rel="stylesheet"
     />
+    
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"/>
   
     <!-- Import all the components-->
@@ -29,19 +31,18 @@
     <header-section></header-section>
     <side-navigation></side-navigation>
     <main>
-      <create-post profile="assets/profile.jpg"></create-post>
+      <create-post profile="/assets/profile.jpg" name="Zheng Wu Bang"></create-post>
       <!-- Post Container-->
       <div class="post-container">
         <div class="single-user-post-container">
-          <user-profile name="John Doe" date="April 9 2023, 13:40 pm" profile="assets/profile.jpg" location="Barcelona"></user-profile>
-          <post-content text="Hey everyone! I'm currently in the beautiful city of Barcelona and I j"></post-content>
+          <user-profile name="Eren" date="April 9 2023, 13:40 pm" profile="assets/eren.jpg" location="Japan"></user-profile>
+          <post-content text="Japan is a fascinating destination that seamlessly blends old-world charm with modern innovation. From the bustling streets of Tokyo to the peaceful temples of Kyoto, there's something for every traveler in this incredible country. Indulge in delicious cuisine, witness breathtaking natural beauty, and immerse yourself in the unique culture and traditions of Japan."></post-content>
           <post-slider id="abc"></post-slider>
           <post-rating rating=3></post-rating>
         </div>        
         <div class="single-user-post-container">
-          <user-profile name="Wu Zhao Bo" date="April 9 2023, 2:40 pm" profile="assets/logo.png"></user-profile>
-          <user-profile name="Wu Zhao Bo" date="April 9 2023, 2:40 pm" profile="/assets/logo.png" location="China"></user-profile>
-          <post-content text="Hey everyone! I'm currently in the beautiful city of Barcelona and I just had to share my experience with you all. This place is simply magical! Hey everyone! I'm currently in the beautiful city of Barcelona and I just had to share my experience with you all. This place is simply magical!"></post-content>
+          <user-profile name="Megan Williams" date="April 23 2023, 9:45 am" profile="/assets/eren.jpg" location="Australia"></user-profile>
+          <post-content text="I recently visited Sydney and was blown away by the beauty of the city. The Opera House and Harbour Bridge were both amazing to see in person, and I loved exploring the beaches and parks. The local coffee culture was also fantastic, with so many great cafes to choose from. Overall, I highly recommend Sydney as a travel destination!"></post-content>
           <post-slider id="bdc"></post-slider>
           <post-rating rating=5></post-rating>
         </div>  

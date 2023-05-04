@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/search-result.css" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&family=Sora:wght@100;300;400;700&family=Urbanist:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Import all the components-->
+    <script type="module" src="component/header/header.js"></script>
+    <script
+      type="module"
+      src="component/side-navigation/side-navigation.js"
+    ></script>
+    <script type="module" src="component/post-profile/post-profile.js"></script>
+    <script type="module" src="component/post-text/post-content.js"></script>
+    <script type="module" src="component/post-rating/rating.js"></script>
+    <script
+      type="module"
+      src="component/post-content-slider/slider.js"
+    ></script>
+    <script type="module" src="component/write-post-model/model.js"></script>
+    <!-- End of importing all the components-->
+    <title>Travely</title>
+  </head>
+
+  <body>
+    <header-section></header-section>
+    <side-navigation></side-navigation>
+    <main>
+      <div class="filter-container">
+        <h2>Search Result :</h2>
+        <form action="#">
+
+            <!-- Dropdown menu for country -->
+          <div class="select-menu" id="country">
+            <div class="select-btn">
+              <span class="sBtn-text">Country</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option">
+                <i class="bx bx-flag" style="color: #171515"></i>
+                <span class="option-text">Malaysia</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #e1306c"></i>
+                <span class="option-text">Australia</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #0e76a8"></i>
+                <span class="option-text">France</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #4267b2"></i>
+                <span class="option-text">China</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #1da1f2"></i>
+                <span class="option-text">Vietnam</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #2f4f4f"></i>
+                <span class="option-text">Egypt</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #00ff7f"></i>
+                <span class="option-text">India</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #dc143c"></i>
+                <span class="option-text">Italy</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #ffc0cb"></i>
+                <span class="option-text">Japan</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #ffa500"></i>
+                <span class="option-text">Switzerland</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #00ffff"></i>
+                <span class="option-text">Taiwan</span>
+              </li>
+              <li class="option">
+                <i class="bx bx-flag" style="color: #800080"></i>
+                <span class="option-text">USA</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Dropdown menu for rating -->
+          <div class="select-menu" id="rating">
+            <div class="select-btn">
+              <span class="sBtn-text">Rating</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option">
+                <span class="option-text">High to Low</span>
+              </li>
+              <li class="option">
+                <span class="option-text">Low to High</span>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <!-- Post Container-->
+      <div class="search-result-container">
+        <div class="single-user-post-container">
+          <user-profile name="Eren" date="April 9 2023, 13:40 pm" profile="assets/eren.jpg" location="Japan"></user-profile>
+          <post-content text="Japan is a fascinating destination that seamlessly blends old-world charm with modern innovation. From the bustling streets of Tokyo to the peaceful temples of Kyoto, there's something for every traveler in this incredible country. Indulge in delicious cuisine, witness breathtaking natural beauty, and immerse yourself in the unique culture and traditions of Japan."></post-content>
+          <post-slider id="abc"></post-slider>
+          <post-rating rating=3></post-rating>
+        </div>        
+        <div class="single-user-post-container">
+          <user-profile name="Megan Williams" date="April 23 2023, 9:45 am" profile="/assets/eren.jpg" location="Australia"></user-profile>
+          <post-content text="I recently visited Sydney and was blown away by the beauty of the city. The Opera House and Harbour Bridge were both amazing to see in person, and I loved exploring the beaches and parks. The local coffee culture was also fantastic, with so many great cafes to choose from. Overall, I highly recommend Sydney as a travel destination!"></post-content>
+          <post-slider id="bdc"></post-slider>
+          <post-rating rating=5></post-rating>
+        </div>  
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/27fa9359fc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/search.js"></script>
+  </body>
+</html>

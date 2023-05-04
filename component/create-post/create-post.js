@@ -22,12 +22,17 @@ class createPosts extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     //read data dynamically
-    this.shadowRoot.querySelector('.profile-name-container img').setAttribute("img", this.getAttribute('profile'));
+    const profile = this.getAttribute('profile');
+    this.shadowRoot.querySelector('.profile-name-container img').setAttribute("src", profile);
 
+    const name = this.getAttribute('name');
     const placeholderContainer = this.shadowRoot.querySelector('.placeholder-container');
     placeholderContainer.addEventListener('click', () => {
       const modalElement = document.createElement('create-post-modal');
+      modalElement.setAttribute('name', name);
+      modalElement.setAttribute('profile', profile);
       document.body.appendChild(modalElement);
+      
     });
 
   }

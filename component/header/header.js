@@ -12,13 +12,12 @@ template.innerHTML = `
       <h2>Travely</h2>
     </div>
     <form class="searchbar-container">
-      <input
-        class="searchinput"
-        type="search"
-        placeholder="What are you looking for ?"
-        onfocus="this.placeholder=''"
-        onblur="this.placeholder='What are you looking for ?'"
-      />
+      <div class="search-container">
+        <input type="text" name="search" placeholder="Search..." class="search-input">
+        <a href="search-result.html" class="search-btn">
+            <i class="fas fa-search"></i>      
+        </a>
+      </div>
     </form>
 
     <div class="icon-container">
