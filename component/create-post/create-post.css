@@ -1,6 +1,6 @@
 /* Write Post */
 .write-post-container {
-  position: absolute;
+  position: relative;
   left: 20em;
   top: 5em;
   width: 60%;

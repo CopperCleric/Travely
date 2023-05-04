@@ -7,7 +7,7 @@ template.innerHTML = `
     <img src="assets/profile.jpg" />
     <div class="profile-name">Zheng Wu Bang</div>
     <hr />
-    <p class="user-email">@wbzheng@gmail.com</p>
+    <p class="user-email">wbzheng@gmail.com</p>
   </div>
 </div>
 

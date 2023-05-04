@@ -5,17 +5,15 @@ template.innerHTML = `
   <div class="slider">
     <div class="slides ">
       <div class="slide ">
-        <img src="assets/profile.jpg" alt="" />
+        <img class="slideImg" src="assets/japanView.jpeg" alt="" />
       </div>
       <div class="slide fade">
-        <img src="assets/profile.jpg" alt="" />
+        <img class="slideImg" src="assets/balloonView.jpg" alt="" />
       </div>
       <div class="slide fade">
-        <img src="assets/profile.jpg" alt="" />
+        <img class="slideImg" src="assets/usaView.jpg" alt="" />
       </div>
-      <div class="slide fade">
-        <img src="assets/profile.jpg" alt="" />
-      </div>
+    
       <a class="prev">
         ❮
       </a>
