@@ -13,7 +13,7 @@
   padding: 25px;
   margin: 15px;
   float: left;
-  width: 15%;
+  width: 22%;
   box-shadow: 5px 5px 5px 1px rgb(176, 176, 176);
 }
 
@@ -49,7 +49,7 @@
   border-radius: 6px;
   padding: 20px;
   margin: 15px;
-  margin-top: 50px;
+  margin-bottom: 50px;
   width: 80%;
   box-shadow: 5px 5px 5px 1px rgb(176, 176, 176);
 }
@@ -142,7 +142,7 @@ img{
 }
 
 .select{
-  width: 95%;
+  width: 85%;
   text-align:end;
 }
 
