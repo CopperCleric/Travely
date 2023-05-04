@@ -163,10 +163,11 @@ const toggleShowOption = () => {
   optionsList.style.display = showOption ? 'block' : 'none';
 }
 
-
 // EDIT POST
 const caption = document.getElementById("caption");
 const captionInput = document.getElementById("captionInput");
+const locationText = document.getElementById("locationText");
+const locationInput = document.getElementById("locationInput");
 const editBar = document.getElementById("editBar");
 
 const showEdit = () => {
@@ -174,17 +175,31 @@ const showEdit = () => {
   caption.style.display = "none";
   captionInput.value = caption.textContent;
   captionInput.style.display = "block";
+
+  locationText.style.display = "none";
+  locationInput.value = locationText.textContent;
+  locationInput.style.display = "block";
+
   editBar.style.display = "flex";
 }
 
 const closeEdit = () => {
   caption.style.display = "block";
   captionInput.style.display = "none";
+
+  locationText.style.display = "block";
+  locationInput.style.display = "none";
+
   editBar.style.display = "none";
 }
 
 const saveEdit = () => {
+  if(captionInput.value === "" || locationInput.value === ""){
+    alert("Post description and location cannot be empty!");
+    return;
+  }
   caption.textContent = captionInput.value;
+  locationText.textContent = locationInput.value;
   closeEdit();
 }
 
@@ -219,6 +234,7 @@ const toggleComment = () => {
 
 // RATING
 const stars = document.querySelectorAll(".ratingStars span");
+const clearBtn = document.getElementById("clearBtn");
 let rating = 0;
 
 stars.forEach((star) => {
@@ -240,7 +256,7 @@ stars.forEach((star) => {
 });
 
 function updateStars() {
-  stars.forEach((star) => {
+  stars.forEach((star) => { // show color for selected star
     const starRating = parseInt(star.id.replace("star", ""));
     if (starRating <= rating) {
       star.classList.add("selected");
@@ -248,7 +264,19 @@ function updateStars() {
       star.classList.remove("selected");
     }
   });
+
+  if(rating > 0) { // show clear rating button if rating is greater than 0;
+    clearBtn.style.display = "block";
+  }
+  else{
+    clearBtn.style.display = "none";
+  }
 }
+
+clearBtn.addEventListener('click', () => { // clear rating function
+  rating = 0;
+  updateStars();
+});
 
 
 
