@@ -1,6 +1,6 @@
 const registerForm = document.querySelector('#register-form');
 const usernameInput = registerForm.querySelector('input[name="username"]');
-// const emailInput = registerForm.querySelector('input[name="email"]');
+const emailInput = registerForm.querySelector('input[name="email"]');
 const passwordInput = registerForm.querySelector('input[name="password"]');
 const confirmPasswordInput = registerForm.querySelector('input[name="confirm-password"]');
 
@@ -14,11 +14,11 @@ if (usernameInput.value.length < 3) {
 }
 
 // Email constraints
-// const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-// if (!emailRegex.test(emailInput.value)) {
-//     alert('Email must be a valid email address');
-//     return;
-// }
+const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+if (!emailRegex.test(emailInput.value)) {
+    alert('Email must be a valid email address');
+    return;
+}
 
 // Password constraints
 if (passwordInput.value.length < 8) {

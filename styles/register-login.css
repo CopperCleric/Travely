@@ -57,6 +57,10 @@ body, input {
     z-index: 2;
 }
 
+.sign-up-group {
+    top: 10%;
+}
+
 form {
     display: flex;
     align-items: center;

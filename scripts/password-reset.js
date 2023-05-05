@@ -1,15 +1,17 @@
 const passwordResetForm = document.querySelector('#password-reset-form');
-const usernameInput = passwordResetForm.querySelector('input[name="username"]');
+const emailInput = passwordResetForm.querySelector('input[name="email"]');
 const newPasswordInput = passwordResetForm.querySelector('input[name="new-password"]');
-const confirmPasswordInput = registerForm.querySelector('input[name="confirm-password"]');
+const confirmPasswordInput = passwordResetForm.querySelector('input[name="confirm-password"]');
 
 passwordResetForm.addEventListener('submit', (event) => {
 event.preventDefault();
 
-// Username constraints
-if (usernameInput.value.length < 3) {
-    alert('Username must be at least 3 characters long');
-    return;
+
+// Email constraints
+const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+if (!emailRegex.test(emailInput.value)) {
+  alert('Email must be a valid email address');
+  return;
 }
 
 // Password constraints
@@ -22,6 +24,8 @@ if (newPasswordInput.value !== confirmPasswordInput.value) {
     alert('Passwords do not match');
     return;
 }
+
+alert('We have sent you an verification email. Please check.');
 
 // Submit the form if all constraints pass
 passwordResetForm.submit();
