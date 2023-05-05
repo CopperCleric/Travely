@@ -109,14 +109,6 @@
   font-size: 14px;
 }
 
-/* #saveBtn {
-  background-color: var(--light-purple);
-} */
-
-/* #cancelBtn {
-  background-color: var(--background-blue);
-} */
-
 .locationTag {
   display: flex;
   align-items: center;

@@ -1,11 +1,3 @@
-// COMMENT SECTION
-let commentsLen = 0;
-const commentsText = document.getElementById("commentsText");
-
-const refreshCommentsLength = () => {
-  commentsText.textContent = `${commentsLen} comments`;
-}
-
 const comments = [ // mock data
   {
     username: 'Saitama',
@@ -23,6 +15,14 @@ const comments = [ // mock data
     imgSrc: 'assets/bertholdt.jpeg'
   },
 ];
+
+// COMMENT SECTION
+let commentsLen = 0;
+const commentsText = document.getElementById("commentsText");
+
+const refreshCommentsLength = () => {
+  commentsText.textContent = `${commentsLen} comments`;
+}
 
 const addComment = (username, text, imgSrc) => { // add comment into html
   const commentWrapper = document.createElement('div');
@@ -117,35 +117,6 @@ const showSlides = (n) => {
   dots[slideIndex-1].className += " active";
 }
 showSlides(slideIndex);
-
-// LIKE POST FEATURE
-// const ratingText = document.getElementById('ratingText');
-// let likes = 69;
-// let isLike = false;
-
-// const refreshLike = () => {
-//   ratingText.textContent = `${likes} likes`;
-// }
-// refreshLike();
-
-// const toggleLike = () => {
-//   isLike = !isLike;
-//   const likeIcon = document.getElementById('likeIcon');
-
-//   if(isLike) { // user like the post
-//     likeIcon.classList.add("isLike");
-//     likeIcon.classList.remove("outlinedIcon");
-//     likes++;
-//     refreshLike();
-//   }
-//   else{ // user cancel like
-//     likeIcon.classList.add("outlinedIcon");
-//     likeIcon.classList.remove("isLike");
-//     likes--;
-//     refreshLike();
-//   }
-// }
-
 
 // BACK BUTTON
 const backBtn = document.getElementById("backBtn");
@@ -243,16 +214,6 @@ stars.forEach((star) => {
     updateStars();
     console.log(`You've rated ${rating} stars!`);
   });
-
-  // star.addEventListener("mouseover", () => {
-  //   rating = parseInt(star.id.replace("star", ""));
-  //   updateStars();
-  // });
-
-  // star.addEventListener("mouseout", () => {
-  //   rating = 0;
-  //   updateStars();
-  // });
 });
 
 function updateStars() {
